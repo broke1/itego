@@ -7,7 +7,77 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 1024px;
-  border: 2px solid;
+  width: 1140px;
+}
+
+/* Меню*/
+.menu {
+  background: #151719;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  oopacity: 1;
+}
+
+.menu .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 15px;
+}
+
+.menu .container a {
+  text-decoration: none;
+  font-size: 22px;
+  display: inline-block;
+  color: white;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.menu .container a:hover {
+  text-decoration: none;
+}
+
+.menu .container a:hover span {
+  width: 100%;
+}
+
+.menu .container a span {
+  display: inline-block;
+  position: absolute;
+  background: white;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.menu .container .callback-menu {
+  border: 4px solid white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-left: 5%;
+}
+
+.menu .container .callback-menu:hover {
+  background: white;
+  color: #151719;
+}
+
+.menu .container .callback-menu span {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
