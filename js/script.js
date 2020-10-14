@@ -28,8 +28,16 @@ window.addEventListener('load', function() {
 
   })
 
+// Приветствие
 
 
+new Vue({
+  el: ".greeting",
+  data: {
+    text: "ITEGO - это небольшая команда специалистов, которая подходит индивидуально к каждому клиенту."
+  }
+
+})
 
 
 

@@ -10,12 +10,115 @@ body {
   width: 1140px;
 }
 
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../webfonts/Lora-VariableFont_wght.ttf) format("ttf");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@-webkit-keyframes arrow {
+  0% {
+    color: white;
+  }
+  20% {
+    color: #310062;
+  }
+  40% {
+    color: white;
+  }
+  60% {
+    color: white;
+  }
+  80% {
+    color: white;
+  }
+  100% {
+    color: white;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    color: white;
+  }
+  20% {
+    color: #310062;
+  }
+  40% {
+    color: white;
+  }
+  60% {
+    color: white;
+  }
+  80% {
+    color: white;
+  }
+  100% {
+    color: white;
+  }
+}
+
+@-webkit-keyframes circle {
+  0% {
+    background: white;
+  }
+  20% {
+    background: #310062;
+  }
+  40% {
+    background: white;
+  }
+  60% {
+    background: white;
+  }
+  80% {
+    background: white;
+  }
+  100% {
+    background: white;
+  }
+}
+
+@keyframes circle {
+  0% {
+    background: white;
+  }
+  20% {
+    background: #310062;
+  }
+  40% {
+    background: white;
+  }
+  60% {
+    background: white;
+  }
+  80% {
+    background: white;
+  }
+  100% {
+    background: white;
+  }
+}
+
 /* Меню*/
 .menu {
   background: #151719;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   oopacity: 1;
+  width: 1140px;
+  padding: 8px 25px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  z-index: 2;
+  opacity: 0.8;
+  /* Блок Приветствие*/
 }
 
 .menu .container {
@@ -32,7 +135,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 8px 15px;
 }
 
 .menu .container a {
@@ -69,7 +171,7 @@ body {
   border: 4px solid white;
   border-radius: 10px;
   padding: 5px 10px;
-  margin-left: 5%;
+  margin-left: 10%;
 }
 
 .menu .container .callback-menu:hover {
@@ -79,5 +181,75 @@ body {
 
 .menu .container .callback-menu span {
   display: none;
+}
+
+.greeting {
+  height: 100vh;
+  position: relative;
+  background-image: url(../images/back-greeting.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 80%;
+}
+
+.greeting .greeting-text {
+  font-size: 45px;
+  width: 70%;
+  color: white;
+  text-align: center;
+  line-height: 70px;
+  position: absolute;
+  top: 30vh;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  font-family: 'Lora', serif;
+}
+
+.greeting .greeting-arrow {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  bottom: 8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.greeting .greeting-arrow .arrow-circle {
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background: white;
+  margin-top: 8px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-animation: 1.5s ease infinite 4s circle;
+          animation: 1.5s ease infinite 4s circle;
+}
+
+.greeting .greeting-arrow .arrow-circle:nth-child(2) {
+  -webkit-animation: 1.5s ease infinite 4.2s circle;
+          animation: 1.5s ease infinite 4.2s circle;
+}
+
+.greeting .greeting-arrow .arrow-itself {
+  color: white;
+  font-size: 40px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-animation: 1.5s ease infinite 4.4s arrow;
+          animation: 1.5s ease infinite 4.4s arrow;
 }
 /*# sourceMappingURL=style.css.map */
