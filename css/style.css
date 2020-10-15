@@ -564,4 +564,97 @@ body {
 #compare .grid-table .footer {
   font-weight: bold;
 }
+
+#team {
+  padding: 100px 0;
+  background: #310062;
+}
+
+#team .title {
+  color: white;
+  font-size: 35px;
+  margin-bottom: 100px;
+  text-align: center;
+  line-height: 50px;
+}
+
+#team .team-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#team .team-block .team-item {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
+}
+
+#team .team-block .team-item .img-block {
+  height: 280px;
+}
+
+#team .team-block .team-item .img-block img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#team .team-block .team-item .text-block {
+  height: 280px;
+  background: white;
+  color: #151719;
+  font-size: 25px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#team .team-block .team-item .text-block span {
+  display: block;
+}
+
+#team .team-block .team-item:nth-child(even) {
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+#team .team-block .show-team {
+  -webkit-transform: translateY(0px) !important;
+          transform: translateY(0px) !important;
+  opacity: 1;
+}
 /*# sourceMappingURL=style.css.map */

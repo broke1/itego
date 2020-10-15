@@ -235,6 +235,56 @@ new Vue({
 })
 
 
+// Команда
+
+Vue.component('team-item', {
+  props: ['team'],
+  template: `
+    <div class="team-item">
+      <div class="img-block">
+        <img :src="team.img" />
+      </div>
+      <div class="text-block"><span>{{team.description}}</span></div>
+    </div>
+  `
+})
+
+new Vue({
+  el: "#team",
+  data: {
+    text: "В нашей команде только настоящие профессионалы своего дела.",
+    team: [
+      { img: "images/team/img-1.png", description: 'Благодаря большой команде мы всегда находим решения, за счет обмена опытом.'},
+      { img: "images/team/img-2.png", description: 'Мы работаем по сменам, поэтому и поддержку оказываем круглосуточно.'},
+      { img: "images/team/img-1.png", description: 'Благодаря большой команде мы всегда находим решения, за счет обмена опытом.'},
+      { img: "images/team/img-2.png", description: 'Мы работаем по сменам, поэтому и поддержку оказываем круглосуточно.'},
+    ]
+  }
+
+})
+
+let team = document.querySelector('#team')
+let pos_team =  team.offsetTop - team.offsetHeight/3
+
+
+window.onscroll = () => { 
+
+  let current_scroll = window.pageYOffset
+  
+
+  if (current_scroll > pos_team) {
+    document.querySelectorAll('.team-item').forEach( item => {
+      item.classList.add('show-team')
+    })
+  } else {
+    document.querySelectorAll('.team-item').forEach( item => {
+      item.classList.remove('show-team')
+    })
+  }
+
+
+
+}
 
 
 

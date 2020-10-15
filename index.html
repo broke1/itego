@@ -43,6 +43,14 @@
       <grid-table :compare="table"></grid-table>
     </div>
   </section>
+  <section id="team">
+    <div class="container">
+      <div class="title">{{text}}</div>
+      <div class="team-block">
+        <team-item v-for="(item,i) in team" :key="i" :team="item"></team-item>
+      </div>
+    </div>
+  </section>
   <article class="modal_callback" v-show="active">
     <div class="overlay"></div>
     <div class="form">
