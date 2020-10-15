@@ -502,4 +502,66 @@ body {
   opacity: 1;
   visability: visible;
 }
+
+/* Сравнение */
+#compare {
+  padding: 100px;
+}
+
+#compare .title {
+  font-size: 35px;
+  color: #151719;
+  margin-bottom: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+#compare .title span {
+  text-transform: uppercase;
+  margin: 20px 0;
+  font-weight: bold;
+  display: block;
+}
+
+#compare .grid-table {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (100px)[6];
+  -ms-grid-columns: 40% 30% 30%;
+      grid-template: repeat(6, 100px)/40% 30% 30%;
+  margin-top: 100px;
+}
+
+#compare .grid-table .item {
+  font-size: 25px;
+  color: #151719;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 20px;
+}
+
+#compare .grid-table .header {
+  font-weight: bold;
+  border-bottom: 2px solid #310062;
+}
+
+#compare .grid-table .blue {
+  background: #310062;
+  color: white;
+}
+
+#compare .grid-table .footer {
+  font-weight: bold;
+}
 /*# sourceMappingURL=style.css.map */

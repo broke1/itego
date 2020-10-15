@@ -349,3 +349,47 @@ $blue: #310062
     .show
       opacity: 1
       visability: visible
+
+
+/* Сравнение */
+
+#compare
+  padding: 100px
+
+  .title
+    font-size: 35px
+    color: $black
+    margin-bottom: 50px
+    text-align: center
+    line-height: 50px
+
+    span
+      text-transform: uppercase
+      margin: 20px 0
+      font-weight: bold
+      display: block
+
+  .grid-table
+    display: grid
+    grid-template: repeat(6, 100px) / 40% 30% 30%
+    margin-top: 100px
+
+    .item
+      font-size: 25px
+      color: $black
+      display: flex
+      flex-flow: column
+      justify-content: center
+      align-items: flex-start 
+      padding-left: 20px
+
+    .header
+      font-weight: bold
+      border-bottom: 2px solid $blue
+
+    .blue
+      background: $blue
+      color: $white
+
+    .footer
+      font-weight: bold

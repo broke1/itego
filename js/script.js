@@ -19,7 +19,7 @@ window.addEventListener('load', function() {
       menu: [
         {url:"#greeting",name:"Приветствие",class:"anchor-link"},
         {url:"#troubles",name:"Решения",class:"anchor-link"},
-        {url:"main",name:"Сравнения",class:"anchor-link"},
+        {url:"#compare",name:"Сравнения",class:"anchor-link"},
         {url:"main",name:"Услуги",class:"anchor-link"},
         {url:"main",name:"Контакты",class:"anchor-link"},
         {url:"#",name:"Оставить заявку",class:"callback-menu callback"},
@@ -185,5 +185,57 @@ function showStuff() {
     button.classList.remove('show')
   }
 }
+
+
+// Сравнение
+
+
+Vue.component('grid-table', {
+  props: ['compare'],
+  template: `
+    <div class="grid-table">
+      <div class="item header">{{compare[0].text}}</div>
+      <div class="item  header">{{compare[0].text2}}</div>
+      <div class="item  header">{{compare[0].text3}}</div>
+      <div class="item ">{{compare[1].text}}</div>
+      <div class="item ">{{compare[1].text2}}</div>
+      <div class="item ">{{compare[1].text3}}</div>
+      <div class="item blue">{{compare[2].text}}</div>
+      <div class="item blue">{{compare[2].text2}}</div>
+      <div class="item blue">{{compare[2].text3}}</div>
+      <div class="item ">{{compare[3].text}}</div>
+      <div class="item ">{{compare[3].text2}}</div>
+      <div class="item ">{{compare[3].text3}}</div>
+      <div class="item blue">{{compare[4].text}}</div>
+      <div class="item blue">{{compare[4].text2}}</div>
+      <div class="item blue">{{compare[4].text3}}</div>
+      <div class="item footer">{{compare[5].text}}</div>
+      <div class="item footer">{{compare[5].text2}}</div>
+      <div class="item footer">{{compare[5].text3}}</div>
+    </div>
+  `
+})
+
+
+
+new Vue({
+  el: "#compare",
+  data: {
+    text: "Содержать штатного специалиста или локальную it инфраструктуру это <br> <span>не выгодно</span> Давайте посчитаем.",
+    table: [
+      { text: "Расходы в месяц в руб.", text2: "Штатный сотрудник", text3: "IT-аутсорс" },
+      { text: "Sony playstation 4 и игры", text2: "30 000", text3: "-" },
+      { text: "Кальян и табак", text2: "7 000", text3: "-" },
+      { text: "Проститутки", text2: "50 000", text3: "-" },
+      { text: "Зарплата", text2: "80 000", text3: "50 000" },
+      { text: "Итого", text2: "167 000", text3: "50 000" },
+    ]
+  }
+
+})
+
+
+
+
 
 })

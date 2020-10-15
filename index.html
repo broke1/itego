@@ -37,6 +37,12 @@
       <div class="button callback">Оставить заявку</div>
     </div>
   </section>
+  <section id="compare">
+    <div class="container">
+      <div class="title" v-html="text"></div>
+      <grid-table :compare="table"></grid-table>
+    </div>
+  </section>
   <article class="modal_callback" v-show="active">
     <div class="overlay"></div>
     <div class="form">
