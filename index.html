@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ITEGO</title>
   <link rel="stylesheet" href="css/style.css" type="text/css">
-  <link rel="stylesheet" href="css/font_awessom.css" type="text/css">
+  <link rel="stylesheet" href="css/font_awessom.css" type="text/css"> 
   <script src="js/vue.js"></script>
   <script src="js/script.js"></script>
 </head>
@@ -15,12 +15,20 @@
       <menu-items v-for="item in menu" :menu="item" :key="item.name"></menu-items>
     </div>
   </article>
-  <section class="greeting">
+  <section id="greeting">
     <div class="greeting-text">{{text}}</div>
     <div class="greeting-arrow">
       <div class="arrow-circle"></div>
       <div class="arrow-circle"></div>
       <i class="fas fa-angle-down arrow-itself"></i>
+    </div>
+  </section>
+  <section id="troubles">
+    <div class="container">
+      <div class="title">{{text}}</div>
+      <div class="troubles-block">
+        <trouble-item v-for="item in troubles" :troubles="item" :key="item.title"></trouble-item>
+      </div>
     </div>
   </section>
 

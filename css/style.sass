@@ -3,6 +3,7 @@
 body 
   margin: 0
   padding: 0
+  font-family: 'Lora', serif
 
 .container
   margin: 0 auto
@@ -13,8 +14,7 @@ body
   font-style: normal
   font-weight: 400
   font-display: swap
-  src: url(../webfonts/Lora-VariableFont_wght.ttf) format('ttf')
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+  src: url(../webfonts/Lora-Regular.ttf) format('truetype')
 
 $black: #151719
 $white: white
@@ -121,7 +121,7 @@ $blue: #310062
   
   /* Блок Приветствие*/
 
-.greeting
+#greeting
   height: 100vh
   position: relative
   background-image: url(../images/back-greeting.png)
@@ -130,7 +130,7 @@ $blue: #310062
   background-position-y: 80%
 
   .greeting-text
-    font-size: 45px
+    font-size: 38px
     width: 70%
     color: $white
     text-align: center
@@ -139,7 +139,7 @@ $blue: #310062
     top: 30vh
     left: 50%
     transform: translate(-50%)
-    font-family: 'Lora', serif
+    
 
   .greeting-arrow
     position: absolute
@@ -168,3 +168,49 @@ $blue: #310062
       font-size: 40px
       transition: all 0.3s ease
       animation: 1.5s ease infinite 4.4s arrow
+
+
+  /* Проблемы */
+
+#troubles
+  padding: 100px 0
+
+  .title
+    font-size: 35px
+    color: $black
+    text-transform: uppercase
+    margin: 50px 0
+    text-align: center
+
+  .troubles-block
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    align-items: center
+    margin-top: 100px
+
+    .item
+      display: flex
+      flex-flow: column nowrap
+      justify-content: flex-start
+      align-items: center
+      width: 300px
+      height: 400px
+      margin-bottom: 100px
+
+      .icon
+        color: $blue
+        font-size: 50px
+        margin-bottom: 50px
+
+      .item-title
+        font-weight: bold
+        font-size: 25px
+        margin-bottom: 30px
+        text-align: center
+        text-transform: uppercase
+
+      .item-description
+        font-size: 20px
+        text-align: justify
+        line-height: 30px

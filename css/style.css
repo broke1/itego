@@ -3,6 +3,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Lora', serif;
 }
 
 .container {
@@ -15,8 +16,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(../webfonts/Lora-VariableFont_wght.ttf) format("ttf");
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  src: url(../webfonts/Lora-Regular.ttf) format("truetype");
 }
 
 @-webkit-keyframes arrow {
@@ -183,17 +183,18 @@ body {
   display: none;
 }
 
-.greeting {
+#greeting {
   height: 100vh;
   position: relative;
   background-image: url(../images/back-greeting.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 80%;
+  /* Проблемы */
 }
 
-.greeting .greeting-text {
-  font-size: 45px;
+#greeting .greeting-text {
+  font-size: 38px;
   width: 70%;
   color: white;
   text-align: center;
@@ -203,10 +204,9 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
-  font-family: 'Lora', serif;
 }
 
-.greeting .greeting-arrow {
+#greeting .greeting-arrow {
   position: absolute;
   left: 50%;
   -webkit-transform: translate(-50%);
@@ -227,7 +227,7 @@ body {
           align-items: center;
 }
 
-.greeting .greeting-arrow .arrow-circle {
+#greeting .greeting-arrow .arrow-circle {
   border-radius: 50%;
   width: 12px;
   height: 12px;
@@ -239,17 +239,85 @@ body {
           animation: 1.5s ease infinite 4s circle;
 }
 
-.greeting .greeting-arrow .arrow-circle:nth-child(2) {
+#greeting .greeting-arrow .arrow-circle:nth-child(2) {
   -webkit-animation: 1.5s ease infinite 4.2s circle;
           animation: 1.5s ease infinite 4.2s circle;
 }
 
-.greeting .greeting-arrow .arrow-itself {
+#greeting .greeting-arrow .arrow-itself {
   color: white;
   font-size: 40px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   -webkit-animation: 1.5s ease infinite 4.4s arrow;
           animation: 1.5s ease infinite 4.4s arrow;
+}
+
+#troubles {
+  padding: 100px 0;
+}
+
+#troubles .title {
+  font-size: 35px;
+  color: #151719;
+  text-transform: uppercase;
+  margin: 50px 0;
+  text-align: center;
+}
+
+#troubles .troubles-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 100px;
+}
+
+#troubles .troubles-block .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 300px;
+  height: 400px;
+  margin-bottom: 100px;
+}
+
+#troubles .troubles-block .item .icon {
+  color: #310062;
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+#troubles .troubles-block .item .item-title {
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#troubles .troubles-block .item .item-description {
+  font-size: 20px;
+  text-align: justify;
+  line-height: 30px;
 }
 /*# sourceMappingURL=style.css.map */
