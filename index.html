@@ -31,6 +31,29 @@
       </div>
     </div>
   </section>
+  <section id="contact_us">
+    <div class="container">
+      <div class="title">{{text}}</div>
+      <div class="button callback">Оставить заявку</div>
+    </div>
+  </section>
+  <article class="modal_callback" v-show="active">
+    <div class="overlay"></div>
+    <div class="form">
+      <i class="fas fa-times cancel-icon"></i>
+      <div class="title">{{text}}</div>
+      <div class="inputs-block show" >
+        <div class="label">Ваше имя:</div>
+        <input v-model="name">
+        <div class="label">Ваше телефон:</div>
+        <input v-model="phone">
+        <div class="label">или e-mail:</div>
+        <input v-model="email">
+      </div>
+      <div class="success">{{text_success}}</div>
+      <div class="button show callback-send">Отправить</div>
+    </div>
+  </article>
 
   
 </body>

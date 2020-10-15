@@ -8,7 +8,7 @@ window.addEventListener('load', function() {
   Vue.component('menu-items', {
     props: ['menu'],
     template: `
-      <a :href="menu.url" :class="menu.class" class="anchor-link">{{menu.name}}<span></span></a>
+      <a :href="menu.url" :class="menu.class">{{menu.name}}<span></span></a>
     `
   })
 
@@ -17,12 +17,12 @@ window.addEventListener('load', function() {
     el: ".menu",
     data: {
       menu: [
-        {url:"#greeting",name:"Приветствие",class:""},
-        {url:"#troubles",name:"Решения",class:""},
-        {url:"main",name:"Сравнения",class:""},
-        {url:"main",name:"Услуги",class:""},
-        {url:"main",name:"Контакты",class:""},
-        {url:"main",name:"Оставить заявку",class:"callback-menu"},
+        {url:"#greeting",name:"Приветствие",class:"anchor-link"},
+        {url:"#troubles",name:"Решения",class:"anchor-link"},
+        {url:"main",name:"Сравнения",class:"anchor-link"},
+        {url:"main",name:"Услуги",class:"anchor-link"},
+        {url:"main",name:"Контакты",class:"anchor-link"},
+        {url:"#",name:"Оставить заявку",class:"callback-menu callback"},
       ]
     }
 
@@ -119,5 +119,71 @@ new Vue({
 
 })
 
+
+// Свяжитесь с нами
+
+new Vue({
+  el: "#contact_us",
+  data: {
+    text: "Оставьте свои данные и мы поможем Вам более эффективно построить it инфраструктуру."
+  }
+
+})
+
+// Модальное окно
+
+let body = document.querySelector('body')
+
+
+let modal = new Vue({
+  el: ".modal_callback",
+  data: {
+    active: false,
+    text: "Оставьте свои данные",
+    name: '',
+    phone: '',
+    email: '',
+    text_success: 'Мы скоро с Вами свяжемся.' 
+  }
+
+})
+
+document.querySelectorAll('.callback').forEach( item => {
+  item.addEventListener('click', e=> {
+    modal.active = !modal.active
+    body.style.overflow = 'hidden'
+  })
+})
+
+document.querySelector('.cancel-icon').addEventListener('click', e=> {
+    modal.active = !modal.active
+    body.style.overflow = 'auto'
+    showStuff()
+})
+
+document.querySelector('.callback-send').addEventListener('click', e=>{
+  // collect data and send
+  modal.name = ''
+  modal.phone = ''
+  modal.email = ''
+  showStuff()
+
+})
+
+function showStuff() {
+  let success = document.querySelector('.success'),
+      inputs = document.querySelector('.inputs-block'),
+      button = document.querySelector('.form .button')
+
+  if (success.classList.contains('show')) {
+    success.classList.remove('show')
+    inputs.classList.add('show')
+    button.classList.add('show')
+  } else {
+    success.classList.add('show')
+    inputs.classList.remove('show')
+    button.classList.remove('show')
+  }
+}
 
 })
