@@ -51,6 +51,27 @@
       </div>
     </div>
   </section>
+  <section id="services">
+    <div class="container">
+      <div class="title">{{text}}</div>
+      <div class="services-block">
+        <div class="service-overflow">
+          <service-item v-for="(item,i) in service" :key="i" :service="item"></service-item>
+        </div>
+        <i class="fas fa-chevron-left arrow-left"></i>
+        <i class="fas fa-chevron-right arrow-right"></i>
+      </div>
+    </div>
+  </section>
+  <section id="contacs">
+    <div class="container">
+      <div class="title">{{text}}</div>
+      <div class="contacts-block">
+        <contact-item v-for="(item,i) in contacts" :key="i" :contacts="item"></contact-item>
+      </div>
+      <div class="footer">Itego.ru <span>2020</span></div>
+    </div>
+  </section>
   <article class="modal_callback" v-show="active">
     <div class="overlay"></div>
     <div class="form">
@@ -68,7 +89,5 @@
       <div class="button show callback-send">Отправить</div>
     </div>
   </article>
-
-  
 </body>
 </html>

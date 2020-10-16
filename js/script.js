@@ -20,8 +20,8 @@ window.addEventListener('load', function() {
         {url:"#greeting",name:"Приветствие",class:"anchor-link"},
         {url:"#troubles",name:"Решения",class:"anchor-link"},
         {url:"#compare",name:"Сравнения",class:"anchor-link"},
-        {url:"main",name:"Услуги",class:"anchor-link"},
-        {url:"main",name:"Контакты",class:"anchor-link"},
+        {url:"#services",name:"Услуги",class:"anchor-link"},
+        {url:"#contacs",name:"Контакты",class:"anchor-link"},
         {url:"#",name:"Оставить заявку",class:"callback-menu callback"},
       ]
     }
@@ -155,10 +155,16 @@ document.querySelectorAll('.callback').forEach( item => {
   })
 })
 
+let success = document.querySelector('.success'),
+      inputs = document.querySelector('.inputs-block'),
+      button = document.querySelector('.form .button')
+
 document.querySelector('.cancel-icon').addEventListener('click', e=> {
     modal.active = !modal.active
     body.style.overflow = 'auto'
-    showStuff()
+    success.classList.remove('show')
+    inputs.classList.add('show')
+    button.classList.add('show')
 })
 
 document.querySelector('.callback-send').addEventListener('click', e=>{
@@ -166,25 +172,13 @@ document.querySelector('.callback-send').addEventListener('click', e=>{
   modal.name = ''
   modal.phone = ''
   modal.email = ''
-  showStuff()
+  success.classList.add('show')
+  inputs.classList.remove('show')
+  button.classList.remove('show')
 
 })
 
-function showStuff() {
-  let success = document.querySelector('.success'),
-      inputs = document.querySelector('.inputs-block'),
-      button = document.querySelector('.form .button')
 
-  if (success.classList.contains('show')) {
-    success.classList.remove('show')
-    inputs.classList.add('show')
-    button.classList.add('show')
-  } else {
-    success.classList.add('show')
-    inputs.classList.remove('show')
-    button.classList.remove('show')
-  }
-}
 
 
 // Сравнение
@@ -266,6 +260,9 @@ new Vue({
 let team = document.querySelector('#team')
 let pos_team =  team.offsetTop - team.offsetHeight/3
 
+let contacts = document.querySelector('#contacs')
+let pos_contacts =  contacts.offsetTop - contacts.offsetHeight/3
+
 
 window.onscroll = () => { 
 
@@ -282,9 +279,107 @@ window.onscroll = () => {
     })
   }
 
+  if (current_scroll > pos_contacts) {
+    document.querySelectorAll('.contact-icon').forEach( item => {
+      item.classList.add('show-icon')
+    })
+  } else {
+    document.querySelectorAll('.contact-icon').forEach( item => {
+      item.classList.remove('show-icon')
+    })
+  }
+
 
 
 }
+
+
+// Услуги
+
+
+Vue.component('service-item', {
+  props: ['service'],
+  template: `
+    <div class="service-item">
+      <a :href="service.url" target="_blanc">
+        <img :src="service.img" />
+        <div class="overlay"></div>
+        <div class="text-block"><span>{{service.description}}</span></div>
+      </a>
+    </div>
+  `
+})
+
+
+new Vue({
+  el: "#services",
+  data: {
+    text: "Что мы предлагаем.",
+    service: [
+      {url:"pages/1c_program.html",img: "images/services/img-1.png", description: "1С программист"},
+      {url:"pages/1c_program.html",img: "images/services/img-2.png", description: "Поддержка пользователей"},
+      {url:"pages/1c_program.html",img: "images/services/img-3.png", description: "Видеонаблюдение"},
+      {url:"pages/1c_program.html",img: "images/services/img-4.png", description: "Администрирвоание серверов"},
+    ]
+  }
+
+})
+
+
+document.querySelector('.arrow-right').addEventListener('click', () => {
+  let items = document.querySelectorAll('.service-item')
+  let clone = items[0].cloneNode(true)
+  let service_block = items[0].parentElement
+  items[0].style.marginLeft = '-320px'
+  setTimeout(() => {
+    service_block.removeChild(items[0])
+    service_block.appendChild(clone)
+  },300)
+})
+
+document.querySelector('.arrow-left').addEventListener('click', () => {
+  let items = document.querySelectorAll('.service-item')
+  let last = items.length - 1
+  let clone = items[last].cloneNode(true)
+  clone.style.marginLeft = "-320px"
+  let service_block = items[0].parentElement
+  service_block.removeChild(items[last])
+  service_block.insertBefore(clone, items[0])
+  setTimeout( () => {
+    clone.style.marginLeft = "20px"
+  },50)
+  
+})
+
+
+// Контакты
+
+
+Vue.component('contact-item', {
+  props: ['contacts'],
+  template: `
+      <a :href="contacts.url" class="contact-link" target="_blanc">
+        <i :class="contacts.class" class="contact-icon"></i>
+        <p class="text-block">{{contacts.description}}</p>
+      </a>
+  `
+})
+
+
+new Vue({
+  el: "#contacs",
+  data: {
+    text: "Контакты",
+    contacts: [
+      {url:"tel:12345678", class: "fas fa-mobile-alt", description: "8-(912)-234-53-76"},
+      {url: "mailto:support@yandex.ru", class: "far fa-envelope", description: "support@yandex.ru"},
+      {url:"https://api.whatsapp.com/send?phone=77079389810",class: "fab fa-whatsapp", description: "8-(912)-234-53-76"},
+      {url: "https://tlgg.ru/itego", class: "fab fa-telegram-plane", description: "@it_support"},
+    ]
+  }
+
+})
+
 
 
 

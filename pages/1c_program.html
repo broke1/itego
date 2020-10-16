@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1c Programmer</title>
+  <link rel="stylesheet" href="../css/style.css" type="text/css">
+  <link rel="stylesheet" href="../css/font_awessom.css" type="text/css"> 
+  <script src="../js/vue.js"></script>
+  <script src="../js/script_for_pages.js"></script>
+</head>
+<body>
+  <article class="menu">
+    <div class="container">
+      <menu-items v-for="item in menu" :menu="item" :key="item.name"></menu-items>
+    </div>
+  </article>
+  <section id="block-on-pages">
+    <div class="container">
+      Здесь будет описание страницы 1с программист.
+    </div>
+  </section>
+  <section id="contacs">
+    <div class="container">
+      <div class="title">{{text}}</div>
+      <div class="contacts-block">
+        <contact-item v-for="(item,i) in contacts" :key="i" :contacts="item"></contact-item>
+      </div>
+      <div class="footer">Itego.ru <span>2020</span></div>
+    </div>
+  </section>
+  <article class="modal_callback" v-show="active">
+    <div class="overlay"></div>
+    <div class="form">
+      <i class="fas fa-times cancel-icon"></i>
+      <div class="title">{{text}}</div>
+      <div class="inputs-block show" >
+        <div class="label">Ваше имя:</div>
+        <input v-model="name">
+        <div class="label">Ваше телефон:</div>
+        <input v-model="phone">
+        <div class="label">или e-mail:</div>
+        <input v-model="email">
+      </div>
+      <div class="success">{{text_success}}</div>
+      <div class="button show callback-send">Отправить</div>
+    </div>
+  </article>
+</body>
+</html>

@@ -116,7 +116,7 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
-  z-index: 2;
+  z-index: 5;
   opacity: 0.8;
   /* Блок Приветствие*/
 }
@@ -391,7 +391,7 @@ body {
   z-index: 4;
   background: white;
   width: 40%;
-  height: 70vh;
+  height: 75vh;
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
@@ -470,7 +470,7 @@ body {
   color: #151719;
   font-size: 25px;
   cursor: pointer;
-  margin: 30px 0;
+  margin: 20px 0;
   opacity: 0;
   visability: hidden;
   -webkit-transition: all 0.3s ease;
@@ -656,5 +656,213 @@ body {
   -webkit-transform: translateY(0px) !important;
           transform: translateY(0px) !important;
   opacity: 1;
+}
+
+/* Устуги */
+#services {
+  padding: 100px 0;
+}
+
+#services .title {
+  color: #151719;
+  font-size: 35px;
+  margin-bottom: 100px;
+  text-align: center;
+  line-height: 50px;
+}
+
+#services .services-block {
+  padding: 0 60px;
+  position: relative;
+}
+
+#services .services-block .arrow-left {
+  font-size: 50px;
+  color: #310062;
+  position: absolute;
+  top: 40%;
+  left: 20px;
+  cursor: pointer;
+}
+
+#services .services-block .arrow-right {
+  font-size: 50px;
+  color: #310062;
+  position: absolute;
+  top: 40%;
+  right: 20px;
+  cursor: pointer;
+}
+
+#services .services-block .service-overflow {
+  width: auto;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#services .services-block .service-overflow .service-item {
+  position: relative;
+  width: 300px;
+  min-width: 300px;
+  height: 300px;
+  margin: 0 20px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#services .services-block .service-overflow .service-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#services .services-block .service-overflow .service-item .overlay {
+  position: absolute;
+  background: #151719;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  z-index: 2;
+}
+
+#services .services-block .service-overflow .service-item .text-block {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 25px;
+  color: white;
+  z-index: 3;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+#services .services-block .service-overflow .service-item .text-block span {
+  display: block;
+  text-align: center;
+}
+
+/* Контакты*/
+#contacs {
+  background: #151719;
+  padding-top: 100px;
+}
+
+#contacs .title {
+  color: white;
+  font-size: 35px;
+  margin-bottom: 80px;
+  text-align: center;
+  line-height: 50px;
+}
+
+#contacs .contacts-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 80px;
+}
+
+#contacs .contacts-block .contact-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0;
+  text-decoration: none;
+}
+
+#contacs .contacts-block .contact-link:hover {
+  text-decoration: none;
+}
+
+#contacs .contacts-block .contact-link .contact-icon {
+  color: white;
+  font-size: 40px;
+  width: 40px;
+  height: 40px;
+  margin-right: 50px;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: translateY(-60px);
+          transform: translateY(-60px);
+  margin-top: 10px;
+}
+
+#contacs .contacts-block .contact-link .text-block {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 30px;
+  width: 300px;
+}
+
+#contacs .contacts-block .contact-link .show-icon {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+#contacs .footer {
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#contacs .footer span {
+  margin-left: 20px;
+}
+
+/* Отдельные страницы */
+#block-on-pages {
+  padding: 100px 0;
 }
 /*# sourceMappingURL=style.css.map */
