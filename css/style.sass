@@ -9,6 +9,12 @@ body
   margin: 0 auto
   width: 1140px
 
+  @media screen and (max-width: 1000px)
+    width: 960px
+
+  @media screen and (max-width: 780px)
+    width: 720px
+
 @font-face 
   font-family: 'Lora'
   font-style: normal
@@ -74,13 +80,24 @@ $blue: #310062
   transform: translate(-50%)
   z-index: 5
   opacity: 0.8
+  
+  @media screen and (max-width: 1000px)
+    width: 90vw
 
+  @media screen and (max-width: 780px)
+    width: 100vw
 
   .container
     display: flex
     flex-flow: row nowrap
     justify-content: space-between
     align-items: center
+
+    @media screen and (max-width: 1000px)
+      width: 900px
+
+    @media screen and (max-width: 780px)
+      width: 720px
 
     a
       text-decoration: none
@@ -89,6 +106,12 @@ $blue: #310062
       color: white
       transition: all 0.3s ease
       position: relative
+
+      @media screen and (max-width: 1000px)
+        font-size: 18px
+
+      @media screen and (max-width: 780px)
+        font-size: 14px
 
       &:hover
         text-decoration: none
@@ -113,6 +136,9 @@ $blue: #310062
       padding: 5px 10px
       margin-left: 10%
 
+      @media screen and (max-width: 1000px)
+        margin-left: 0
+
       &:hover
         background: $white
         color: $black
@@ -132,6 +158,9 @@ $blue: #310062
   background-position-y: 80%
   background-attachment: fixed
 
+  @media screen and (max-width: 1000px)
+    background-position: center
+
   .greeting-text
     font-size: 38px
     width: 70%
@@ -142,6 +171,12 @@ $blue: #310062
     top: 30vh
     left: 50%
     transform: translate(-50%)
+
+    @media screen and (max-width: 1000px)
+      font-size: 25px
+
+    @media screen and (max-width: 780px)
+      font-size: 20px
     
 
   .greeting-arrow
@@ -178,6 +213,10 @@ $blue: #310062
 #troubles
   padding: 100px 0
 
+  @media screen and (max-width: 1000px)
+    padding: 0
+    padding-top: 50px
+
   .title
     font-size: 35px
     color: $black
@@ -185,12 +224,18 @@ $blue: #310062
     margin: 50px 0
     text-align: center
 
+    @media screen and (max-width: 1000px)
+      font-size: 25px
+
   .troubles-block
     display: flex
     flex-flow: row wrap
     justify-content: space-between
     align-items: center
     margin-top: 100px
+
+    @media screen and (max-width: 780px)
+      padding: 0 30px
 
     .item
       display: flex
@@ -200,6 +245,12 @@ $blue: #310062
       width: 300px
       height: 400px
       margin-bottom: 100px
+
+      @media screen and (max-width: 1000px)
+        margin-bottom: 50px
+
+      @media screen and (max-width: 780px)
+        margin-bottom: 20px
 
       .icon
         color: $blue
@@ -213,10 +264,16 @@ $blue: #310062
         text-align: center
         text-transform: uppercase
 
+        @media screen and (max-width: 1000px)
+          font-size: 18px
+
       .item-description
         font-size: 20px
         text-align: justify
         line-height: 30px
+
+        @media screen and (max-width: 1000px)
+          font-size: 14px
 
   /* Свяжитесь с нами */
 
@@ -237,6 +294,9 @@ $blue: #310062
       text-align: center
       margin-bottom: 50px
 
+      @media screen and (max-width: 780px)
+        font-size: 22px
+
     .button
       border: 4px solid $white
       border-radius: 10px
@@ -244,6 +304,9 @@ $blue: #310062
       color: $white
       font-size: 25px
       cursor: pointer
+
+      @media screen and (max-width: 780px)
+        font-size: 20px
 
       &:hover
         background: $white
@@ -278,6 +341,7 @@ $blue: #310062
     z-index: 4
     background: $white
     width: 40%
+    max-width: 600px
     height: 75vh
     left: 50%
     transform: translate(-50%)
@@ -287,6 +351,13 @@ $blue: #310062
     justify-content: flex-start
     align-items: center
     padding: 20px
+
+    @media screen and (max-width: 1000px)
+      width: 50%
+
+    @media screen and (max-width: 780px)
+      width: 60%
+      height: 60vh
 
     .cancel-icon
       position: absolute
@@ -300,6 +371,10 @@ $blue: #310062
       color: $black
       font-size: 30px
       margin: 50px 0
+
+      @media screen and (max-width: 1000px)
+        font-size: 25px
+        margin: 40px 0
 
     .inputs-block
       display: flex
@@ -315,6 +390,9 @@ $blue: #310062
         font-size: 25px
         margin-bottom: 20px
 
+        @media screen and (max-width: 1000px)
+          font-size: 20px
+
       input
         width: 100%
         padding: 10px
@@ -323,6 +401,10 @@ $blue: #310062
         border-radius: 0
         border: 2px solid $black
         margin-bottom: 40px
+
+        @media screen and (max-width: 1000px)
+          font-size: 20px
+          margin-bottom: 20px
 
     .button
       border: 4px solid $black
@@ -335,6 +417,9 @@ $blue: #310062
       opacity: 0
       visability: hidden
       transition: all 0.3s ease
+
+      @media screen and (max-width: 1000px)
+        margin-top: 50px
 
       &:hover
         background: $black
@@ -366,7 +451,7 @@ $blue: #310062
 /* Сравнение */
 
 #compare
-  padding: 100px
+  padding: 100px 0
 
   .title
     font-size: 35px
@@ -374,6 +459,12 @@ $blue: #310062
     margin-bottom: 50px
     text-align: center
     line-height: 50px
+
+    @media screen and (max-width: 1000px)
+      font-size: 25px
+
+    @media screen and (max-width: 780px)
+      font-size: 20px
 
     span
       text-transform: uppercase
@@ -386,6 +477,13 @@ $blue: #310062
     grid-template: repeat(6, 100px) / 40% 30% 30%
     margin-top: 100px
 
+    @media screen and (max-width: 1000px)
+      grid-template: repeat(6, 80px) / 40% 30% 30%
+      margin-top: 60px
+
+    @media screen and (max-width: 780px)
+      grid-template: repeat(6, 70px) / 40% 30% 30%
+
     .item
       font-size: 25px
       color: $black
@@ -394,6 +492,12 @@ $blue: #310062
       justify-content: center
       align-items: flex-start 
       padding-left: 20px
+
+      @media screen and (max-width: 1000px)
+        font-size: 20px
+
+      @media screen and (max-width: 780px)
+        font-size: 18px
 
     .header
       font-weight: bold
@@ -419,6 +523,9 @@ $blue: #310062
     text-align: center
     line-height: 50px
 
+    @media screen and (max-width: 1000px)
+      font-size: 25px
+
   .team-block
     display: flex
     flex-flow: row nowrap
@@ -436,6 +543,9 @@ $blue: #310062
       .img-block
         height: 280px
 
+        @media screen and (max-width: 780px)
+          height: 180px
+
         img
           width: 100%
           height: 100%
@@ -450,6 +560,13 @@ $blue: #310062
         display: flex
         flex-flow: column
         justify-content: center
+
+        @media screen and (max-width: 1000px)
+          font-size: 20px
+
+        @media screen and (max-width: 780px)
+          font-size: 16px
+          height: 180px
 
         span
           display: block
@@ -466,7 +583,10 @@ $blue: #310062
 /* Устуги */
 
 #services
-  padding: 100px 0 
+  padding: 100px 0
+
+  @media screen and (max-width: 1000px)
+     padding: 70px 0
 
   .title
     color: $black
@@ -474,6 +594,10 @@ $blue: #310062
     margin-bottom: 100px
     text-align: center
     line-height: 50px
+
+    @media screen and (max-width: 1000px)
+      font-size: 25px
+      margin-bottom: 70px
 
   .services-block
     padding: 0 60px
@@ -510,6 +634,12 @@ $blue: #310062
         height: 300px
         margin: 0 20px
         transition: all 0.3s ease
+
+        @media screen and (max-width: 1000px)
+          margin: 0 50px
+
+        @media screen and (max-width: 780px)
+          margin: 0 150px
 
         img
           width: 100%
@@ -558,12 +688,19 @@ $blue: #310062
     text-align: center
     line-height: 50px
 
+    @media screen and (max-width: 1000px)
+      font-size: 25px
+      margin-bottom: 40px
+
   .contacts-block
     display: flex
     flex-flow: column nowrap
     justify-content: flex-start
     align-items: center
     margin-bottom: 80px
+
+    @media screen and (max-width: 1000px)
+      margin-bottom: 60px
 
     .contact-link
       display: flex
@@ -587,6 +724,12 @@ $blue: #310062
         transform: translateY(-60px)
         margin-top: 10px
 
+        @media screen and (max-width: 1000px)
+          font-size: 35px
+
+        @media screen and (max-width: 780px)
+          font-size: 30px
+
 
       .text-block
         margin: 0
@@ -594,6 +737,12 @@ $blue: #310062
         color: $white
         font-size: 30px
         width: 300px
+
+        @media screen and (max-width: 1000px)
+          font-size: 25px
+
+        @media screen and (max-width: 780px)
+          font-size: 20px
 
       .show-icon
         opacity: 1

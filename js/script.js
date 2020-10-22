@@ -150,8 +150,22 @@ let modal = new Vue({
 
 document.querySelectorAll('.callback').forEach( item => {
   item.addEventListener('click', e=> {
+    e.preventDefault()
     modal.active = !modal.active
+   // let top = window.pageYOffset
+    //setTimeout( () => {
+      // window.scrollTo({
+      //   top: top,
+      //   behavior: "smooth"
+      // })
+   //console.log(top)
+    // },1000)
     body.style.overflow = 'hidden'
+   // body.style.position = 'fixed'
+    //body.style.height = "100vh"
+   // body.style.width = '100vw'
+    //body.style.top = `-${top}px`
+    
   })
 })
 
@@ -160,8 +174,13 @@ let success = document.querySelector('.success'),
       button = document.querySelector('.form .button')
 
 document.querySelector('.cancel-icon').addEventListener('click', e=> {
+    e.preventDefault()
     modal.active = !modal.active
     body.style.overflow = 'auto'
+    //body.style.height = "auto"
+    //body.style.position = 'relative'
+   // body.style.width = 'auto'
+   // body.style.top = `0px`
     success.classList.remove('show')
     inputs.classList.add('show')
     button.classList.add('show')
@@ -325,12 +344,22 @@ new Vue({
 
 })
 
+let step = '320', margin = '20'
+
+if(screen.width <= 1000) {
+  step = '350'
+  margin = '50'
+} 
+if (screen.width <= 800) {
+  step = '450'
+  margin = '150'
+}
 
 document.querySelector('.arrow-right').addEventListener('click', () => {
   let items = document.querySelectorAll('.service-item')
   let clone = items[0].cloneNode(true)
   let service_block = items[0].parentElement
-  items[0].style.marginLeft = '-320px'
+  items[0].style.marginLeft = `-${step}px`
   setTimeout(() => {
     service_block.removeChild(items[0])
     service_block.appendChild(clone)
@@ -341,12 +370,12 @@ document.querySelector('.arrow-left').addEventListener('click', () => {
   let items = document.querySelectorAll('.service-item')
   let last = items.length - 1
   let clone = items[last].cloneNode(true)
-  clone.style.marginLeft = "-320px"
+  clone.style.marginLeft = `-${step}px`
   let service_block = items[0].parentElement
   service_block.removeChild(items[last])
   service_block.insertBefore(clone, items[0])
   setTimeout( () => {
-    clone.style.marginLeft = "20px"
+    clone.style.marginLeft = `${margin}px`
   },50)
   
 })
