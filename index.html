@@ -10,9 +10,22 @@
   <script src="js/script.js"></script>
 </head>
 <body>
-  <article class="menu">
+  <article class="menu"  v-if="desktop">
     <div class="container">
       <menu-items v-for="item in menu" :menu="item" :key="item.name"></menu-items>
+    </div>
+  </article>
+  <article class="menu-mobile" v-if="!desktop" :class="{menuBlockOpen:open}">
+    <div class="container-mobile">
+      <div class="hamburger" :class="{hamburgerOpen:open}">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="menu-block">
+        <menu-items-mobile v-for="item in menu" :menu="item" :key="item.name"></menu-items-mobile>
+      </div>
+      <a :href="button.url" :class="button.class">{{button.name}}<span></span></a>
     </div>
   </article>
   <section id="greeting">

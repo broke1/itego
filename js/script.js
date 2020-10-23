@@ -4,6 +4,14 @@ window.addEventListener('load', function() {
 
 
   // МЕНЮ
+
+  let desktop = true
+
+  if (screen.width < 500) {
+    desktop = false
+  }
+
+  // Меню десктопное
       
   Vue.component('menu-items', {
     props: ['menu'],
@@ -23,10 +31,45 @@ window.addEventListener('load', function() {
         {url:"#services",name:"Услуги",class:"anchor-link"},
         {url:"#contacs",name:"Контакты",class:"anchor-link"},
         {url:"#",name:"Оставить заявку",class:"callback-menu callback"},
-      ]
+      ],
+      desktop: desktop
     }
 
   })
+
+  // Меню мобильное
+
+Vue.component('menu-items-mobile', {
+  props: ['menu'],
+  template: `
+    <a :href="menu.url" :class="menu.class">{{menu.name}}<span></span></a>
+  `
+})
+
+
+let menuMob = new Vue({
+  el: ".menu-mobile",
+  data: {
+    menu: [
+      {url:"#greeting",name:"Приветствие",class:"anchor-link"},
+      {url:"#troubles",name:"Решения",class:"anchor-link"},
+      {url:"#compare",name:"Сравнения",class:"anchor-link"},
+      {url:"#services",name:"Услуги",class:"anchor-link"},
+      {url:"#contacs",name:"Контакты",class:"anchor-link"},
+    ],
+    button: {url:"#",name:"Оставить заявку",class:"callback-menu callback"},
+    desktop: desktop,
+    open: false,
+  }
+
+})
+
+  if (document.querySelector('.hamburger')) {
+    document.querySelector('.hamburger').addEventListener('click', e => {
+      menuMob.open = !menuMob.open
+    })
+  }
+  
 
   let anchors = document.querySelectorAll('.anchor-link')
 
@@ -42,6 +85,8 @@ window.addEventListener('load', function() {
       })
     })
   }
+
+
 
 // Приветствие
 

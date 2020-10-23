@@ -15,6 +15,9 @@ body
   @media screen and (max-width: 780px)
     width: 720px
 
+  @media screen and (max-width: 500px) and (orientation: portrait)
+    width: 100%
+
 @font-face 
   font-family: 'Lora'
   font-style: normal
@@ -71,7 +74,6 @@ $blue: #310062
 .menu 
   background: $black
   transition: all 0.3s ease
-  oopacity: 1
   width: 1140px
   padding: 8px 25px
   position: fixed
@@ -145,6 +147,84 @@ $blue: #310062
 
       span
         display: none
+
+.menu-mobile
+  z-index: 5
+  opacity: 0.8
+  background: $black
+  transition: all 0.3s ease
+  width: 100%
+  position: fixed
+  top: 0
+  left: 0
+  height: 9vh
+  overflow: hidden
+
+  .container-mobile
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+    padding: 12px
+
+    .hamburger
+      cursor: pointer
+
+      .line
+        width: 35px
+        height: 6px
+        background: $white
+        border-radius: 30px
+        margin-bottom: 7px
+        opacity: 1
+        transition: all 0.3s ease
+
+        &:nth-child(3)
+          margin-bottom: 0
+
+    .hamburgerOpen
+      
+      .line
+
+        &:nth-child(1)
+          transform: rotate(45deg) translate(10px,10px)
+
+        &:nth-child(2)
+          opacity: 0
+
+        &:nth-child(3)
+          transform: rotate(-45deg) translate(8px,-8px) 
+
+    .menu-block
+      position: absolute
+      display: flex
+      flex-flow: column nowrap
+      top: 65px
+      left: 0
+      width: 100%
+      border-top: 2px solid $white
+
+      a
+        text-decoration: none
+        font-size: 22px
+        display: inline-block
+        color: $white
+        position: relative
+        margin: 10px
+
+
+    .callback-menu
+      border: 4px solid $white
+      border-radius: 10px
+      padding: 5px 10px
+      display: block
+      color: $white
+      text-decoration: none
+        
+.menuBlockOpen
+  height: 45vh      
+
+
 
   
   /* Блок Приветствие*/
