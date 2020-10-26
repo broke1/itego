@@ -183,6 +183,12 @@ body {
   }
 }
 
+@media screen and (max-width: 400px) and (orientation: portrait) {
+  .menu .container {
+    width: 90%;
+  }
+}
+
 @media screen and (max-width: 710px) and (orientation: landscape) {
   .menu .container {
     width: 90%;
