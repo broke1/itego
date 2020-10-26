@@ -449,8 +449,7 @@ document.addEventListener("touchstart", function (e) {
 })
 
 document.addEventListener("touchmove", function (e) {
-  alert(e.target)
-   if (e.target.classList.contain('text-block')) {
+   if (e.target.classList.contains('text-block')) {
      
       if ((e.touches[0].pageX - touchcoord) < 0) {
         let items = document.querySelectorAll('.service-item')
