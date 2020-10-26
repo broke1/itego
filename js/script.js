@@ -446,13 +446,18 @@ let touchcoord = 0
 
 document.addEventListener("touchstart", function (e) {
   touchcoord = e.touches[0].pageX
+  alert(e.touches[0].pageX)
 })
 
 document.addEventListener("touchmove", function (e) {
-   if (e.target.classList.contains('text-block')) {
+   let node = e.target
+   if (node.nodeName == 'span') {
+     node = node.parentElement
+   }
+   if (node.classList.contains('text-block')) {
      
       if ((e.touches[0].pageX - touchcoord) < 0) {
-        alert(e.touches[0].pageX)
+        
         let items = document.querySelectorAll('.service-item')
         let last = items.length - 1
         let clone = items[last].cloneNode(true)
@@ -476,9 +481,9 @@ document.addEventListener("touchmove", function (e) {
    } 
 })
 
-// document.addEventListener("touched", function (e) {
-//   event = null;
-// });
+document.addEventListener("touched", function (e) {
+  alert(e.touches[0].pageX)
+});
 
 
 // Контакты
