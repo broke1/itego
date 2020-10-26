@@ -449,8 +449,9 @@ document.addEventListener("touchstart", function (e) {
 })
 
 document.addEventListener("touchmove", function (e) {
+  alert(e.target)
    if (e.target.classList.contain('text-block')) {
-     alert(e.target)
+     
       if ((e.touches[0].pageX - touchcoord) < 0) {
         let items = document.querySelectorAll('.service-item')
         let last = items.length - 1
