@@ -478,7 +478,7 @@ document.addEventListener("touchstart", function (e) {
 //    } 
 // })
 
-document.addEventListener("touched", function (e) {
+document.addEventListener("touchend", function (e) {
   alert(e.touches[0].pageX)
 })
 
