@@ -462,9 +462,9 @@ document.addEventListener("touchmove", function (e) {
         let service_block = items[0].parentElement
         service_block.removeChild(items[last])
         service_block.insertBefore(clone, items[0])
-        // setTimeout( () => {
-        //   clone.style.marginLeft = `${margin}px`
-        // },1500)
+        setTimeout( () => {
+          clone.style.marginLeft = `${margin}px`
+        },50)
       } else {
         let items = document.querySelectorAll('.service-item')
         let clone = items[0].cloneNode(true)
