@@ -446,12 +446,11 @@ let touchcoord = 0
 
 document.addEventListener("touchstart", function (e) {
   touchcoord = e.touches[0].pageX
-  alert(e.touches[0].pageX)
 })
 
 document.addEventListener("touchmove", function (e) {
    let node = e.target
-   if (node.nodeName == 'span') {
+   if (node.nodeName == 'SPAN') {
      node = node.parentElement
    }
    if (node.classList.contains('text-block')) {
@@ -481,9 +480,9 @@ document.addEventListener("touchmove", function (e) {
    } 
 })
 
-document.addEventListener("touched", function (e) {
-  alert(e.touches[0].pageX)
-});
+// document.addEventListener("touched", function (e) {
+//   alert(e.touches[0].pageX)
+// });
 
 
 // Контакты
