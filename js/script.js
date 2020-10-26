@@ -328,31 +328,35 @@ let contacts = document.querySelector('#contacs')
 let pos_contacts =  contacts.offsetTop - contacts.offsetHeight/3
 
 
-window.onscroll = () => { 
 
-  let current_scroll = window.pageYOffset
-  
+if (screen.width > 700) {
 
-  if (current_scroll > pos_team) {
-    document.querySelectorAll('.team-item').forEach( item => {
-      item.classList.add('show-team')
-    })
-  } else {
-    document.querySelectorAll('.team-item').forEach( item => {
-      item.classList.remove('show-team')
-    })
+  window.onscroll = () => { 
+
+    let current_scroll = window.pageYOffset
+    
+
+    if (current_scroll > pos_team) {
+      document.querySelectorAll('.team-item').forEach( item => {
+        item.classList.add('show-team')
+      })
+    } else {
+      document.querySelectorAll('.team-item').forEach( item => {
+        item.classList.remove('show-team')
+      })
+    }
+
+    if (current_scroll > pos_contacts) {
+      document.querySelectorAll('.contact-icon').forEach( item => {
+        item.classList.add('show-icon')
+      })
+    } else {
+      document.querySelectorAll('.contact-icon').forEach( item => {
+        item.classList.remove('show-icon')
+      })
+    }
+
   }
-
-  if (current_scroll > pos_contacts) {
-    document.querySelectorAll('.contact-icon').forEach( item => {
-      item.classList.add('show-icon')
-    })
-  } else {
-    document.querySelectorAll('.contact-icon').forEach( item => {
-      item.classList.remove('show-icon')
-    })
-  }
-
 
 
 }
@@ -398,6 +402,18 @@ if(screen.width <= 1000) {
 if (screen.width <= 800) {
   step = '450'
   margin = '150'
+}
+if (screen.width <= 500) {
+  step = '300'
+  margin = '0'
+}
+if (screen.height <= 400) {
+  step = '400'
+  margin = '100'
+}
+if (screen.height <= 350) {
+  step = '375'
+  margin = '75'
 }
 
 document.querySelector('.arrow-right').addEventListener('click', () => {

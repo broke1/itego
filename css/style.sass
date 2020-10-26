@@ -18,6 +18,9 @@ body
   @media screen and (max-width: 500px) and (orientation: portrait)
     width: 100%
 
+  @media screen and (max-width: 710px) and (orientation: landscape)
+    width: 100%
+
 @font-face 
   font-family: 'Lora'
   font-style: normal
@@ -101,6 +104,9 @@ $blue: #310062
     @media screen and (max-width: 780px)
       width: 720px
 
+    @media screen and (max-width: 710px) and (orientation: landscape)
+      width: 90%
+
     a
       text-decoration: none
       font-size: 22px
@@ -160,6 +166,9 @@ $blue: #310062
   height: 9vh
   overflow: hidden
 
+  @media screen and (max-width: 350px) and (orientation: portrait)
+    height: 10vh
+
   .container-mobile
     display: flex
     flex-flow: row nowrap
@@ -212,6 +221,8 @@ $blue: #310062
         position: relative
         margin: 10px
 
+        @media screen and (max-width: 350px) and (orientation: portrait)
+          font-size: 18px
 
     .callback-menu
       border: 4px solid $white
@@ -222,9 +233,13 @@ $blue: #310062
       text-decoration: none
         
 .menuBlockOpen
-  height: 45vh      
+  height: 45vh 
 
+  @media screen and (max-width: 380px) and (orientation: portrait)
+    height: 48vh
 
+  @media screen and (max-width: 350px) and (orientation: portrait)
+    height: 49vh
 
   
   /* Блок Приветствие*/
@@ -257,7 +272,23 @@ $blue: #310062
 
     @media screen and (max-width: 780px)
       font-size: 20px
-    
+
+    @media screen and (max-width: 500px) and (orientation: portrait)
+      font-size: 14px
+      width: 100%
+
+    @media screen and (max-width: 370px) and (orientation: portrait)
+      width: 80%
+
+    @media screen and (max-width: 710px) and (orientation: landscape)
+      font-size: 18px
+
+    @media screen and (max-width: 650px) and (orientation: landscape)
+      width: 90%
+
+    @media screen and (max-width: 600px) and (orientation: landscape)
+      line-height: 50px
+
 
   .greeting-arrow
     position: absolute
@@ -297,6 +328,12 @@ $blue: #310062
     padding: 0
     padding-top: 50px
 
+  @media screen and (max-width: 500px) and (orientation: portrait)
+    padding-top: 40px
+
+  @media screen and (max-width: 710px) and (orientation: landscape)
+    padding-top: 0
+
   .title
     font-size: 35px
     color: $black
@@ -307,6 +344,13 @@ $blue: #310062
     @media screen and (max-width: 1000px)
       font-size: 25px
 
+    @media screen and (max-width: 500px) and (orientation: portrait)
+      margin: 0
+      font-size: 16px
+
+    @media screen and (max-width: 710px) and (orientation: landscape)
+      font-size: 20px
+
   .troubles-block
     display: flex
     flex-flow: row wrap
@@ -316,6 +360,18 @@ $blue: #310062
 
     @media screen and (max-width: 780px)
       padding: 0 30px
+
+    @media screen and (max-width: 500px) and (orientation: portrait)
+      margin-top: 50px
+
+    @media screen and (max-width: 710px) and (orientation: landscape)
+      margin-top: 70px
+
+    @media screen and (max-width: 650px) and (orientation: landscape)
+      padding: 0 10px
+
+    @media screen and (max-width: 600px) and (orientation: landscape)
+      justify-content: center
 
     .item
       display: flex
@@ -331,6 +387,13 @@ $blue: #310062
 
       @media screen and (max-width: 780px)
         margin-bottom: 20px
+
+      @media screen and (max-width: 500px) and (orientation: portrait)
+        margin-bottom: 50px
+        height: auto
+
+      @media screen and (max-width: 600px) and (orientation: landscape)
+        margin-bottom: 0
 
       .icon
         color: $blue
@@ -362,6 +425,12 @@ $blue: #310062
   padding: 100px 0
   line-height: 50px
 
+  @media screen and (max-width: 500px) and (orientation: portrait)
+    padding: 50px 0
+
+  @media screen and (max-width: 700px) and (orientation: landscape)
+    padding: 50px 0
+
   .container
     display: flex
     flex-flow: column nowrap
@@ -377,6 +446,9 @@ $blue: #310062
       @media screen and (max-width: 780px)
         font-size: 22px
 
+      @media screen and (max-width: 500px) and (orientation: portrait)
+        font-size: 16px
+
     .button
       border: 4px solid $white
       border-radius: 10px
@@ -387,6 +459,10 @@ $blue: #310062
 
       @media screen and (max-width: 780px)
         font-size: 20px
+
+      @media screen and (max-width: 500px) and (orientation: portrait)
+        font-size: 16px
+        padding: 0 10px
 
       &:hover
         background: $white
@@ -439,6 +515,18 @@ $blue: #310062
       width: 60%
       height: 60vh
 
+    @media screen and (max-width: 500px) and (orientation: portrait)
+      width: 70%
+      height: 70vh
+
+    @media screen and (max-width: 350px) and (orientation: portrait)
+      width: 75%
+      height: 75vh
+
+    @media screen and (max-width: 710px) and (orientation: landscape)
+      width: 80%
+      height: 70vh
+
     .cancel-icon
       position: absolute
       top: 20px
@@ -456,6 +544,20 @@ $blue: #310062
         font-size: 25px
         margin: 40px 0
 
+      @media screen and (max-width: 500px) and (orientation: portrait)
+        font-size: 18px
+        margin-bottom: 30px
+
+      @media screen and (max-width: 710px) and (orientation: landscape)
+        font-size: 20px
+        margin-bottom: 30px
+
+      @media screen and (max-width: 650px) and (orientation: landscape)
+        margin-top: 20px
+
+      @media screen and (max-width: 600px) and (orientation: landscape)
+        margin-top: 0
+
     .inputs-block
       display: flex
       flex-flow: column nowrap
@@ -465,6 +567,9 @@ $blue: #310062
       visability: hidden
       transition: all 0.3s ease
 
+      @media screen and (max-width: 710px) and (orientation: landscape)
+        flex-flow: row wrap
+
       .label
         color: $black
         font-size: 25px
@@ -472,6 +577,12 @@ $blue: #310062
 
         @media screen and (max-width: 1000px)
           font-size: 20px
+
+        @media screen and (max-width: 500px) and (orientation: portrait)
+          font-size: 16px
+
+        @media screen and (max-width: 710px) and (orientation: landscape)
+          width: 150px
 
       input
         width: 100%
@@ -485,6 +596,20 @@ $blue: #310062
         @media screen and (max-width: 1000px)
           font-size: 20px
           margin-bottom: 20px
+
+        @media screen and (max-width: 500px) and (orientation: portrait)
+          font-size: 16px
+          margin-bottom: 16px
+
+        @media screen and (max-width: 710px) and (orientation: landscape)
+          width: 50%
+          margin-left: 15%
+          padding: 5px
+          margin-bottom: 5px
+          font-size: 18px
+
+        @media screen and (max-width: 600px) and (orientation: landscape)
+          margin-left: 10%
 
     .button
       border: 4px solid $black
@@ -500,6 +625,23 @@ $blue: #310062
 
       @media screen and (max-width: 1000px)
         margin-top: 50px
+
+      @media screen and (max-width: 500px) and (orientation: portrait)
+        margin-top: 25px
+
+      @media screen and (max-width: 370px) and (orientation: portrait)
+        margin-top: 10px
+
+      @media screen and (max-width: 350px) and (orientation: portrait)
+        margin-top: 3px
+        font-size: 18px
+
+      @media screen and (max-width: 710px) and (orientation: landscape)
+        font-size: 18px
+        margin-top: 15px
+
+      @media screen and (max-width: 600px) and (orientation: landscape)
+        margin-top: 3px
 
       &:hover
         background: $black
@@ -518,6 +660,12 @@ $blue: #310062
       text-align: center
       white-space: nowrap
 
+      @media screen and (max-width: 500px) and (orientation: portrait)
+        font-size: 18px
+
+      @media screen and (max-width: 710px) and (orientation: landscape)
+        font-size: 20px
+
     .show
       opacity: 1
       visability: visible
@@ -533,6 +681,12 @@ $blue: #310062
 #compare
   padding: 100px 0
 
+  @media screen and (max-width: 500px) and (orientation: portrait)
+    padding: 50px 0
+
+  @media screen and (max-width: 710px) and (orientation: landscape)
+    padding: 50px 0
+
   .title
     font-size: 35px
     color: $black
@@ -545,6 +699,16 @@ $blue: #310062
 
     @media screen and (max-width: 780px)
       font-size: 20px
+
+    @media screen and (max-width: 370px) and (orientation: portrait)
+      padding: 0 20px
+
+    @media screen and (max-width: 710px) and (orientation: landscape)
+      font-size: 18px
+      margin-bottom: 30px
+
+    @media screen and (max-width: 650px) and (orientation: landscape)
+      padding: 0 20px
 
     span
       text-transform: uppercase
@@ -564,6 +728,14 @@ $blue: #310062
     @media screen and (max-width: 780px)
       grid-template: repeat(6, 70px) / 40% 30% 30%
 
+    @media screen and (max-width: 500px) and (orientation: portrait)
+      margin-top: 30px
+      padding: 0 20px
+
+    @media screen and (max-width: 710px) and (orientation: landscape)
+      margin-top: 50px
+      padding: 0 20px
+
     .item
       font-size: 25px
       color: $black
@@ -578,6 +750,9 @@ $blue: #310062
 
       @media screen and (max-width: 780px)
         font-size: 18px
+
+      @media screen and (max-width: 500px) and (orientation: portrait)
+        font-size: 16px
 
     .header
       font-weight: bold
@@ -596,6 +771,12 @@ $blue: #310062
   padding: 100px 0 
   background: $blue
 
+  @media screen and (max-width: 500px) and (orientation: portrait)
+    padding: 50px 0
+
+  @media screen and (max-width: 710px) and (orientation: landscape)
+    padding: 50px 0
+
   .title
     color: $white
     font-size: 35px
@@ -606,11 +787,31 @@ $blue: #310062
     @media screen and (max-width: 1000px)
       font-size: 25px
 
+    @media screen and (max-width: 500px) and (orientation: portrait)
+      font-size: 18px
+      margin-bottom: 50px
+
+    @media screen and (max-width: 710px) and (orientation: landscape)
+      font-size: 18px
+      margin-bottom: 50px
+
+    @media screen and (max-width: 600px) and (orientation: landscape)
+      font-size: 17px
+
   .team-block
     display: flex
     flex-flow: row nowrap
     justify-content: flex-start
     align-items: flex-start
+
+    @media screen and (max-width: 500px) and (orientation: portrait)
+      flex-flow: column nowrap
+      align-items: center
+
+    @media screen and (max-width: 710px) and (orientation: landscape)
+      flex-flow: row wrap
+      align-items: center
+      justify-content: center
 
     .team-item
       width: 25%
@@ -620,11 +821,29 @@ $blue: #310062
       transition: all 0.5s ease
       transform: translateY(-200px)
 
+      @media screen and (max-width: 500px) and (orientation: portrait)
+        width: 300px
+        margin-bottom: 50px
+        transform: translateY(0px) !important
+        opacity: 1
+
+      @media screen and (max-width: 710px) and (orientation: landscape)
+        width: 250px
+        margin-bottom: 50px
+        transform: translateY(0px) !important
+        opacity: 1
+
       .img-block
         height: 280px
 
         @media screen and (max-width: 780px)
           height: 180px
+
+        @media screen and (max-width: 500px) and (orientation: portrait)
+          height: 300px
+
+        @media screen and (max-width: 710px) and (orientation: landscape)
+          height: 250px
 
         img
           width: 100%
@@ -647,6 +866,14 @@ $blue: #310062
         @media screen and (max-width: 780px)
           font-size: 16px
           height: 180px
+        
+        @media screen and (max-width: 500px) and (orientation: portrait)
+          font-size: 18px
+          height: 300px
+
+        @media screen and (max-width: 710px) and (orientation: landscape)
+          font-size: 18px
+          height: 250px
 
         span
           display: block
@@ -654,6 +881,9 @@ $blue: #310062
       &:nth-child(even)
         transform: translateY(200px)
         flex-direction: column-reverse
+
+        @media screen and (max-width: 500px) and (orientation: portrait)
+          flex-direction: column
 
     .show-team
       transform: translateY(0px) !important
@@ -679,9 +909,18 @@ $blue: #310062
       font-size: 25px
       margin-bottom: 70px
 
+    @media screen and (max-width: 500px) and (orientation: portrait)
+      font-size: 20px
+
   .services-block
     padding: 0 60px
     position: relative
+
+    @media screen and (max-width: 370px) and (orientation: portrait)
+      padding: 0 35px
+
+    @media screen and (max-width: 350px) and (orientation: portrait)
+      padding: 0 10px
 
     .arrow-left
       font-size: 50px
@@ -691,6 +930,15 @@ $blue: #310062
       left: 20px
       cursor: pointer
 
+      @media screen and (max-width: 370px) and (orientation: portrait)
+        font-size: 30px
+        left: 5px
+
+      @media screen and (max-width: 350px) and (orientation: portrait)
+        left: 15px
+        color: $white
+        z-index: 3
+
     .arrow-right
       font-size: 50px
       color: $blue
@@ -698,6 +946,15 @@ $blue: #310062
       top: 40%
       right: 20px
       cursor: pointer
+
+      @media screen and (max-width: 370px) and (orientation: portrait)
+        font-size: 30px
+        right: 5px
+
+      @media screen and (max-width: 350px) and (orientation: portrait)
+        right: 15px
+        color: $white
+        z-index: 3
 
     .service-overflow
       width: auto
@@ -721,6 +978,15 @@ $blue: #310062
         @media screen and (max-width: 780px)
           margin: 0 150px
 
+        @media screen and (max-width: 500px) and (orientation: portrait)
+          margin: 0
+
+        @media screen and (max-width: 650px) and (orientation: landscape)
+          margin: 0 100px
+
+        @media screen and (max-width: 600px) and (orientation: landscape)
+          margin: 0 75px
+          
         img
           width: 100%
           height: 100%
@@ -782,6 +1048,10 @@ $blue: #310062
     @media screen and (max-width: 1000px)
       margin-bottom: 60px
 
+    @media screen and (max-width: 710px) and (orientation: landscape)
+      flex-flow: row wrap
+      justify-content: center
+
     .contact-link
       display: flex
       flex-flow: row nowrap
@@ -810,6 +1080,17 @@ $blue: #310062
         @media screen and (max-width: 780px)
           font-size: 30px
 
+        @media screen and (max-width: 500px) and (orientation: portrait)
+          opacity: 1
+          transform: translateY(0px)
+
+        @media screen and (max-width: 350px) and (orientation: portrait)
+          margin-right: 30px
+
+        @media screen and (max-width: 710px) and (orientation: landscape)
+          margin-right: 30px
+          opacity: 1
+          transform: translateY(0px)
 
       .text-block
         margin: 0
@@ -823,6 +1104,17 @@ $blue: #310062
 
         @media screen and (max-width: 780px)
           font-size: 20px
+
+        @media screen and (max-width: 500px) and (orientation: portrait)
+          font-size: 18px
+          width: 200px  
+
+        @media screen and (max-width: 350px) and (orientation: portrait)
+          width: 180px
+
+        @media screen and (max-width: 710px) and (orientation: landscape)
+          font-size: 18px
+          width: 220px
 
       .show-icon
         opacity: 1

@@ -29,6 +29,12 @@ body {
   }
 }
 
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  .container {
+    width: 100%;
+  }
+}
+
 @font-face {
   font-family: 'Lora';
   font-style: normal;
@@ -177,6 +183,12 @@ body {
   }
 }
 
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  .menu .container {
+    width: 90%;
+  }
+}
+
 .menu .container a {
   text-decoration: none;
   font-size: 22px;
@@ -255,6 +267,12 @@ body {
   overflow: hidden;
 }
 
+@media screen and (max-width: 350px) and (orientation: portrait) {
+  .menu-mobile {
+    height: 10vh;
+  }
+}
+
 .menu-mobile .container-mobile {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -329,6 +347,12 @@ body {
   margin: 10px;
 }
 
+@media screen and (max-width: 350px) and (orientation: portrait) {
+  .menu-mobile .container-mobile .menu-block a {
+    font-size: 18px;
+  }
+}
+
 .menu-mobile .container-mobile .callback-menu {
   border: 4px solid white;
   border-radius: 10px;
@@ -341,6 +365,18 @@ body {
 .menuBlockOpen {
   height: 45vh;
   /* Блок Приветствие*/
+}
+
+@media screen and (max-width: 380px) and (orientation: portrait) {
+  .menuBlockOpen {
+    height: 48vh;
+  }
+}
+
+@media screen and (max-width: 350px) and (orientation: portrait) {
+  .menuBlockOpen {
+    height: 49vh;
+  }
 }
 
 #greeting {
@@ -382,6 +418,37 @@ body {
 @media screen and (max-width: 780px) {
   #greeting .greeting-text {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  #greeting .greeting-text {
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 370px) and (orientation: portrait) {
+  #greeting .greeting-text {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  #greeting .greeting-text {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 650px) and (orientation: landscape) {
+  #greeting .greeting-text {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) and (orientation: landscape) {
+  #greeting .greeting-text {
+    line-height: 50px;
   }
 }
 
@@ -444,6 +511,18 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  #troubles {
+    padding-top: 40px;
+  }
+}
+
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  #troubles {
+    padding-top: 0;
+  }
+}
+
 #troubles .title {
   font-size: 35px;
   color: #151719;
@@ -455,6 +534,19 @@ body {
 @media screen and (max-width: 1000px) {
   #troubles .title {
     font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  #troubles .title {
+    margin: 0;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  #troubles .title {
+    font-size: 20px;
   }
 }
 
@@ -478,6 +570,32 @@ body {
 @media screen and (max-width: 780px) {
   #troubles .troubles-block {
     padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  #troubles .troubles-block {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  #troubles .troubles-block {
+    margin-top: 70px;
+  }
+}
+
+@media screen and (max-width: 650px) and (orientation: landscape) {
+  #troubles .troubles-block {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 600px) and (orientation: landscape) {
+  #troubles .troubles-block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -509,6 +627,19 @@ body {
 @media screen and (max-width: 780px) {
   #troubles .troubles-block .item {
     margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  #troubles .troubles-block .item {
+    margin-bottom: 50px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 600px) and (orientation: landscape) {
+  #troubles .troubles-block .item {
+    margin-bottom: 0;
   }
 }
 
@@ -550,6 +681,18 @@ body {
   line-height: 50px;
 }
 
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  #contact_us {
+    padding: 50px 0;
+  }
+}
+
+@media screen and (max-width: 700px) and (orientation: landscape) {
+  #contact_us {
+    padding: 50px 0;
+  }
+}
+
 #contact_us .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -579,6 +722,12 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  #contact_us .container .title {
+    font-size: 16px;
+  }
+}
+
 #contact_us .container .button {
   border: 4px solid white;
   border-radius: 10px;
@@ -591,6 +740,13 @@ body {
 @media screen and (max-width: 780px) {
   #contact_us .container .button {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  #contact_us .container .button {
+    font-size: 16px;
+    padding: 0 10px;
   }
 }
 
@@ -664,6 +820,27 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  .modal_callback .form {
+    width: 70%;
+    height: 70vh;
+  }
+}
+
+@media screen and (max-width: 350px) and (orientation: portrait) {
+  .modal_callback .form {
+    width: 75%;
+    height: 75vh;
+  }
+}
+
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  .modal_callback .form {
+    width: 80%;
+    height: 70vh;
+  }
+}
+
 .modal_callback .form .cancel-icon {
   position: absolute;
   top: 20px;
@@ -683,6 +860,32 @@ body {
   .modal_callback .form .title {
     font-size: 25px;
     margin: 40px 0;
+  }
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  .modal_callback .form .title {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  .modal_callback .form .title {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 650px) and (orientation: landscape) {
+  .modal_callback .form .title {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) and (orientation: landscape) {
+  .modal_callback .form .title {
+    margin-top: 0;
   }
 }
 
@@ -706,6 +909,15 @@ body {
   transition: all 0.3s ease;
 }
 
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  .modal_callback .form .inputs-block {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+}
+
 .modal_callback .form .inputs-block .label {
   color: #151719;
   font-size: 25px;
@@ -715,6 +927,18 @@ body {
 @media screen and (max-width: 1000px) {
   .modal_callback .form .inputs-block .label {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  .modal_callback .form .inputs-block .label {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  .modal_callback .form .inputs-block .label {
+    width: 150px;
   }
 }
 
@@ -735,6 +959,29 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  .modal_callback .form .inputs-block input {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  .modal_callback .form .inputs-block input {
+    width: 50%;
+    margin-left: 15%;
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 600px) and (orientation: landscape) {
+  .modal_callback .form .inputs-block input {
+    margin-left: 10%;
+  }
+}
+
 .modal_callback .form .button {
   border: 4px solid #151719;
   border-radius: 10px;
@@ -752,6 +999,38 @@ body {
 @media screen and (max-width: 1000px) {
   .modal_callback .form .button {
     margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  .modal_callback .form .button {
+    margin-top: 25px;
+  }
+}
+
+@media screen and (max-width: 370px) and (orientation: portrait) {
+  .modal_callback .form .button {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 350px) and (orientation: portrait) {
+  .modal_callback .form .button {
+    margin-top: 3px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  .modal_callback .form .button {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 600px) and (orientation: landscape) {
+  .modal_callback .form .button {
+    margin-top: 3px;
   }
 }
 
@@ -776,6 +1055,18 @@ body {
   white-space: nowrap;
 }
 
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  .modal_callback .form .success {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  .modal_callback .form .success {
+    font-size: 20px;
+  }
+}
+
 .modal_callback .form .show {
   opacity: 1;
   visability: visible;
@@ -790,6 +1081,18 @@ body {
 /* Сравнение */
 #compare {
   padding: 100px 0;
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  #compare {
+    padding: 50px 0;
+  }
+}
+
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  #compare {
+    padding: 50px 0;
+  }
 }
 
 #compare .title {
@@ -809,6 +1112,25 @@ body {
 @media screen and (max-width: 780px) {
   #compare .title {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 370px) and (orientation: portrait) {
+  #compare .title {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  #compare .title {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 650px) and (orientation: landscape) {
+  #compare .title {
+    padding: 0 20px;
   }
 }
 
@@ -845,6 +1167,20 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  #compare .grid-table {
+    margin-top: 30px;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  #compare .grid-table {
+    margin-top: 50px;
+    padding: 0 20px;
+  }
+}
+
 #compare .grid-table .item {
   font-size: 25px;
   color: #151719;
@@ -876,6 +1212,12 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  #compare .grid-table .item {
+    font-size: 16px;
+  }
+}
+
 #compare .grid-table .header {
   font-weight: bold;
   border-bottom: 2px solid #310062;
@@ -895,6 +1237,18 @@ body {
   background: #310062;
 }
 
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  #team {
+    padding: 50px 0;
+  }
+}
+
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  #team {
+    padding: 50px 0;
+  }
+}
+
 #team .title {
   color: white;
   font-size: 35px;
@@ -906,6 +1260,26 @@ body {
 @media screen and (max-width: 1000px) {
   #team .title {
     font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  #team .title {
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  #team .title {
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 600px) and (orientation: landscape) {
+  #team .title {
+    font-size: 17px;
   }
 }
 
@@ -925,6 +1299,33 @@ body {
           align-items: flex-start;
 }
 
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  #team .team-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  #team .team-block {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 #team .team-block .team-item {
   width: 25%;
   display: -webkit-box;
@@ -941,6 +1342,26 @@ body {
           transform: translateY(-200px);
 }
 
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  #team .team-block .team-item {
+    width: 300px;
+    margin-bottom: 50px;
+    -webkit-transform: translateY(0px) !important;
+            transform: translateY(0px) !important;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  #team .team-block .team-item {
+    width: 250px;
+    margin-bottom: 50px;
+    -webkit-transform: translateY(0px) !important;
+            transform: translateY(0px) !important;
+    opacity: 1;
+  }
+}
+
 #team .team-block .team-item .img-block {
   height: 280px;
 }
@@ -948,6 +1369,18 @@ body {
 @media screen and (max-width: 780px) {
   #team .team-block .team-item .img-block {
     height: 180px;
+  }
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  #team .team-block .team-item .img-block {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  #team .team-block .team-item .img-block {
+    height: 250px;
   }
 }
 
@@ -989,6 +1422,20 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  #team .team-block .team-item .text-block {
+    font-size: 18px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  #team .team-block .team-item .text-block {
+    font-size: 18px;
+    height: 250px;
+  }
+}
+
 #team .team-block .team-item .text-block span {
   display: block;
 }
@@ -1000,6 +1447,15 @@ body {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  #team .team-block .team-item:nth-child(even) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 #team .team-block .show-team {
@@ -1034,9 +1490,27 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  #services .title {
+    font-size: 20px;
+  }
+}
+
 #services .services-block {
   padding: 0 60px;
   position: relative;
+}
+
+@media screen and (max-width: 370px) and (orientation: portrait) {
+  #services .services-block {
+    padding: 0 35px;
+  }
+}
+
+@media screen and (max-width: 350px) and (orientation: portrait) {
+  #services .services-block {
+    padding: 0 10px;
+  }
 }
 
 #services .services-block .arrow-left {
@@ -1048,6 +1522,21 @@ body {
   cursor: pointer;
 }
 
+@media screen and (max-width: 370px) and (orientation: portrait) {
+  #services .services-block .arrow-left {
+    font-size: 30px;
+    left: 5px;
+  }
+}
+
+@media screen and (max-width: 350px) and (orientation: portrait) {
+  #services .services-block .arrow-left {
+    left: 15px;
+    color: white;
+    z-index: 3;
+  }
+}
+
 #services .services-block .arrow-right {
   font-size: 50px;
   color: #310062;
@@ -1055,6 +1544,21 @@ body {
   top: 40%;
   right: 20px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 370px) and (orientation: portrait) {
+  #services .services-block .arrow-right {
+    font-size: 30px;
+    right: 5px;
+  }
+}
+
+@media screen and (max-width: 350px) and (orientation: portrait) {
+  #services .services-block .arrow-right {
+    right: 15px;
+    color: white;
+    z-index: 3;
+  }
 }
 
 #services .services-block .service-overflow {
@@ -1094,6 +1598,24 @@ body {
 @media screen and (max-width: 780px) {
   #services .services-block .service-overflow .service-item {
     margin: 0 150px;
+  }
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  #services .services-block .service-overflow .service-item {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 650px) and (orientation: landscape) {
+  #services .services-block .service-overflow .service-item {
+    margin: 0 100px;
+  }
+}
+
+@media screen and (max-width: 600px) and (orientation: landscape) {
+  #services .services-block .service-overflow .service-item {
+    margin: 0 75px;
   }
 }
 
@@ -1188,6 +1710,18 @@ body {
   }
 }
 
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  #contacs .contacts-block {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 #contacs .contacts-block .contact-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1236,6 +1770,29 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  #contacs .contacts-block .contact-link .contact-icon {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 350px) and (orientation: portrait) {
+  #contacs .contacts-block .contact-link .contact-icon {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  #contacs .contacts-block .contact-link .contact-icon {
+    margin-right: 30px;
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
 #contacs .contacts-block .contact-link .text-block {
   margin: 0;
   padding: 0;
@@ -1253,6 +1810,26 @@ body {
 @media screen and (max-width: 780px) {
   #contacs .contacts-block .contact-link .text-block {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  #contacs .contacts-block .contact-link .text-block {
+    font-size: 18px;
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 350px) and (orientation: portrait) {
+  #contacs .contacts-block .contact-link .text-block {
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  #contacs .contacts-block .contact-link .text-block {
+    font-size: 18px;
+    width: 220px;
   }
 }
 
