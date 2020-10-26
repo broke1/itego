@@ -455,7 +455,7 @@ document.addEventListener("touchmove", function (e) {
    }
    if (node.classList.contains('text-block')) {
      
-      if ((e.touches[0].pageX - touchcoord) < 0) {
+      if ((e.touches[0].pageX < touchcoord)) {
         
         let items = document.querySelectorAll('.service-item')
         let last = items.length - 1
