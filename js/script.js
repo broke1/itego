@@ -451,6 +451,15 @@ document.addEventListener("touchstart", function (e) {
 document.addEventListener("touchmove", function (e) {
     if ((e.touches[0].pageX - touchcoord) < 0) {
       let items = document.querySelectorAll('.service-item')
+      let clone = items[0].cloneNode(true)
+      let service_block = items[0].parentElement
+      items[0].style.marginLeft = `-${step}px`
+      setTimeout(() => {
+        service_block.removeChild(items[0])
+        service_block.appendChild(clone)
+      },300)
+    } else {
+      let items = document.querySelectorAll('.service-item')
       let last = items.length - 1
       let clone = items[last].cloneNode(true)
       clone.style.marginLeft = `-${step}px`
@@ -460,15 +469,6 @@ document.addEventListener("touchmove", function (e) {
       setTimeout( () => {
         clone.style.marginLeft = `${margin}px`
       },50)
-    } else {
-      let items = document.querySelectorAll('.service-item')
-      let clone = items[0].cloneNode(true)
-      let service_block = items[0].parentElement
-      items[0].style.marginLeft = `-${step}px`
-      setTimeout(() => {
-        service_block.removeChild(items[0])
-        service_block.appendChild(clone)
-      },300)
     }
 })
 
