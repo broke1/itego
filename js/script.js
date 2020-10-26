@@ -454,7 +454,7 @@ document.addEventListener("touchmove", function (e) {
      node = node.parentElement
    }
    if (node.classList.contains('text-block')) {
-     
+     alert(e.touches[0].pageX)
       if ((e.touches[0].pageX < touchcoord)) {
         alert('left')
         let items = document.querySelectorAll('.service-item')
