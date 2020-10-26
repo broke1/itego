@@ -454,9 +454,7 @@ document.addEventListener("touchmove", function (e) {
      node = node.parentElement
    }
    if (node.classList.contains('text-block')) {
-     alert(e.touches[0].pageX)
       if ((e.touches[0].pageX < touchcoord)) {
-        alert('left')
         let items = document.querySelectorAll('.service-item')
         let last = items.length - 1
         let clone = items[last].cloneNode(true)
@@ -468,7 +466,6 @@ document.addEventListener("touchmove", function (e) {
           clone.style.marginLeft = `${margin}px`
         },50)
       } else {
-        alert('right')
         let items = document.querySelectorAll('.service-item')
         let clone = items[0].cloneNode(true)
         let service_block = items[0].parentElement
