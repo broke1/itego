@@ -48,7 +48,7 @@ body {
     color: white;
   }
   20% {
-    color: #310062;
+    color: #1565C0;
   }
   40% {
     color: white;
@@ -69,7 +69,7 @@ body {
     color: white;
   }
   20% {
-    color: #310062;
+    color: #1565C0;
   }
   40% {
     color: white;
@@ -90,7 +90,7 @@ body {
     background: white;
   }
   20% {
-    background: #310062;
+    background: #1565C0;
   }
   40% {
     background: white;
@@ -111,7 +111,7 @@ body {
     background: white;
   }
   20% {
-    background: #310062;
+    background: #1565C0;
   }
   40% {
     background: white;
@@ -650,14 +650,14 @@ body {
 }
 
 #troubles .troubles-block .item .icon {
-  color: #310062;
+  color: #1565C0;
   font-size: 50px;
   margin-bottom: 50px;
 }
 
 #troubles .troubles-block .item .item-title {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 23px;
   margin-bottom: 30px;
   text-align: center;
   text-transform: uppercase;
@@ -670,7 +670,7 @@ body {
 }
 
 #troubles .troubles-block .item .item-description {
-  font-size: 20px;
+  font-size: 18px;
   text-align: justify;
   line-height: 30px;
 }
@@ -834,10 +834,15 @@ body {
   }
 }
 
+@media screen and (max-width: 400px) and (orientation: portrait) {
+  .modal_callback .form {
+    height: 75vh;
+  }
+}
+
 @media screen and (max-width: 350px) and (orientation: portrait) {
   .modal_callback .form {
     width: 75%;
-    height: 75vh;
   }
 }
 
@@ -854,19 +859,20 @@ body {
   right: 20px;
   font-size: 30px;
   cursor: pointer;
-  color: #310062;
+  color: #1565C0;
 }
 
 .modal_callback .form .title {
   color: #151719;
-  font-size: 30px;
-  margin: 50px 0;
+  font-size: 25px;
+  margin: 30px 0 50px 0;
 }
 
 @media screen and (max-width: 1000px) {
   .modal_callback .form .title {
     font-size: 25px;
     margin: 40px 0;
+    margin-top: 5px;
   }
 }
 
@@ -874,6 +880,19 @@ body {
   .modal_callback .form .title {
     font-size: 18px;
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 400px) and (orientation: portrait) {
+  .modal_callback .form .title {
+    margin-right: 55px;
+  }
+}
+
+@media screen and (max-width: 350px) and (orientation: portrait) {
+  .modal_callback .form .title {
+    margin-right: 45px;
+    margin-bottom: 20px;
   }
 }
 
@@ -885,12 +904,6 @@ body {
 }
 
 @media screen and (max-width: 650px) and (orientation: landscape) {
-  .modal_callback .form .title {
-    margin-top: 20px;
-  }
-}
-
-@media screen and (max-width: 600px) and (orientation: landscape) {
   .modal_callback .form .title {
     margin-top: 0;
   }
@@ -927,7 +940,7 @@ body {
 
 .modal_callback .form .inputs-block .label {
   color: #151719;
-  font-size: 25px;
+  font-size: 22px;
   margin-bottom: 20px;
 }
 
@@ -952,11 +965,11 @@ body {
 .modal_callback .form .inputs-block input {
   width: 100%;
   padding: 10px;
-  font-size: 25px;
+  font-size: 22px;
   color: #151719;
   border-radius: 0;
   border: 2px solid #151719;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -970,6 +983,7 @@ body {
   .modal_callback .form .inputs-block input {
     font-size: 16px;
     margin-bottom: 16px;
+    width: 80%;
   }
 }
 
@@ -989,6 +1003,83 @@ body {
   }
 }
 
+.modal_callback .form .inputs-block .accept-block input[type=checkbox] {
+  display: none;
+}
+
+.modal_callback .form .inputs-block .accept-block input[type=checkbox]:checked + label:before {
+  border-right: none;
+  border-top: none;
+  -webkit-transform: rotate(-50deg);
+          transform: rotate(-50deg);
+  top: 2px;
+  left: 2px;
+  height: 5px;
+}
+
+.modal_callback .form .inputs-block .accept-block input[type=checkbox] + label {
+  font-size: 16px;
+  line-height: 140%;
+  color: #151719;
+  padding-left: 30px;
+  position: relative;
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  .modal_callback .form .inputs-block .accept-block input[type=checkbox] + label {
+    font-size: 14px;
+  }
+}
+
+.modal_callback .form .inputs-block .accept-block input[type=checkbox] + label:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #151719;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.modal_callback .form .inputs-block .description-accept {
+  font-size: 20px;
+  line-height: 180%;
+  padding: 20px 0;
+  text-align: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 1;
+  visibility: vissible;
+  width: 100%;
+  height: 40px;
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  .modal_callback .form .inputs-block .description-accept {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) and (orientation: portrait) {
+  .modal_callback .form .inputs-block .description-accept {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 710px) and (orientation: landscape) {
+  .modal_callback .form .inputs-block .description-accept {
+    font-size: 16px;
+  }
+}
+
+.modal_callback .form .inputs-block .hide {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
+
 .modal_callback .form .button {
   border: 4px solid #151719;
   border-radius: 10px;
@@ -996,34 +1087,21 @@ body {
   color: #151719;
   font-size: 25px;
   cursor: pointer;
-  margin: 20px 0;
+  margin: 10px 0 20px 0;
   opacity: 0;
   visability: hidden;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 1000px) {
-  .modal_callback .form .button {
-    margin-top: 50px;
-  }
-}
-
 @media screen and (max-width: 500px) and (orientation: portrait) {
   .modal_callback .form .button {
-    margin-top: 25px;
-  }
-}
-
-@media screen and (max-width: 370px) and (orientation: portrait) {
-  .modal_callback .form .button {
-    margin-top: 10px;
+    margin-top: 0px;
   }
 }
 
 @media screen and (max-width: 350px) and (orientation: portrait) {
   .modal_callback .form .button {
-    margin-top: 3px;
     font-size: 18px;
   }
 }
@@ -1032,6 +1110,12 @@ body {
   .modal_callback .form .button {
     font-size: 18px;
     margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 650px) and (orientation: landscape) {
+  .modal_callback .form .button {
+    margin-top: 0;
   }
 }
 
@@ -1151,26 +1235,26 @@ body {
 #compare .grid-table {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (100px)[6];
+  -ms-grid-rows: (100px)[9];
   -ms-grid-columns: 40% 30% 30%;
-      grid-template: repeat(6, 100px)/40% 30% 30%;
+      grid-template: repeat(9, 100px)/40% 30% 30%;
   margin-top: 100px;
 }
 
 @media screen and (max-width: 1000px) {
   #compare .grid-table {
-    -ms-grid-rows: (80px)[6];
+    -ms-grid-rows: (80px)[9];
     -ms-grid-columns: 40% 30% 30%;
-        grid-template: repeat(6, 80px)/40% 30% 30%;
+        grid-template: repeat(9, 80px)/40% 30% 30%;
     margin-top: 60px;
   }
 }
 
 @media screen and (max-width: 780px) {
   #compare .grid-table {
-    -ms-grid-rows: (70px)[6];
+    -ms-grid-rows: (70px)[9];
     -ms-grid-columns: 40% 30% 30%;
-        grid-template: repeat(6, 70px)/40% 30% 30%;
+        grid-template: repeat(9, 70px)/40% 30% 30%;
   }
 }
 
@@ -1225,13 +1309,19 @@ body {
   }
 }
 
+@media screen and (max-width: 350px) and (orientation: portrait) {
+  #compare .grid-table .item {
+    font-size: 14px;
+  }
+}
+
 #compare .grid-table .header {
   font-weight: bold;
-  border-bottom: 2px solid #310062;
+  border-bottom: 2px solid #1565C0;
 }
 
 #compare .grid-table .blue {
-  background: #310062;
+  background: #1565C0;
   color: white;
 }
 
@@ -1239,9 +1329,40 @@ body {
   font-weight: bold;
 }
 
+#compare .benefit {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 30px;
+  color: #151719;
+}
+
+@media screen and (max-width: 1000px) {
+  #compare .benefit {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  #compare .benefit {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 350px) and (orientation: portrait) {
+  #compare .benefit {
+    font-size: 16px;
+    margin-top: 35px;
+  }
+}
+
+#compare .benefit span {
+  font-weight: bold;
+  margin-left: 20px;
+}
+
 #team {
   padding: 100px 0;
-  background: #310062;
+  background: #1565C0;
 }
 
 @media screen and (max-width: 500px) and (orientation: portrait) {
@@ -1522,7 +1643,7 @@ body {
 
 #services .services-block .arrow-left {
   font-size: 50px;
-  color: #310062;
+  color: #1565C0;
   position: absolute;
   top: 40%;
   left: 20px;
@@ -1546,7 +1667,7 @@ body {
 
 #services .services-block .arrow-right {
   font-size: 50px;
-  color: #310062;
+  color: #1565C0;
   position: absolute;
   top: 40%;
   right: 20px;

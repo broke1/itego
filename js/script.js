@@ -118,46 +118,53 @@ new Vue({
     text: "Проблемы, от которых мы вас избавим.",
     troubles: [
       {
-        icon: "fas fa-piggy-bank",
-        title:"Экономия",
-        description: `Исходя из всех исследований рынка труда, можно с уверенностью сказать, 
-                      что наше аутсоурс решение, будет для Вас гораздо выгоднее,
-                      чем штатный сотрудник.`
+        icon: "fas fa-laptop-house",
+        title:"Нужно организовать удаленную работу сотрудников?",
+        description: `В кратчайшие сроки переведём сотрудников на удаленную работу и сохраним деятельность компании в полном объеме.`
       },
       {
-        icon: "fas fa-project-diagram",
-        title:"Эффективность",
-        description: `Зачастую один сотрудник просто физически не может справится с задачами,
-                      появившимися в одно время. Наша команда, распределяет задачи и проблемы так,
-                      чтобы они были решены максимально быстро и эффективно.`
+        icon: "fas fa-server",
+        title:"Тормозит сервер 1с?",
+        description: `Наши специалисты найдут причины медленной работы 1с сервера, предлежат решение по оптимизации и улучшению работы.`
       },
       {
-        icon: "fas fa-piggy-bank",
-        title:"Экономия",
-        description: `Исходя из всех исследований рынка труда, можно с уверенностью сказать, 
-                      что наше аутсоурс решение, будет для Вас гораздо выгоднее,
-                      чем штатный сотрудник.`
+        icon: "far fa-frown",
+        title:"Избавим вас от головной боли it.",
+        description: `В нашей команде ребята с огромным опытом работы с серверами, пользовательскими компьютерами и сетевым оборудованием. 
+                      Возьмём все головные боли на себя, организуем работу таким образом что бы не отвлекать вас от бизнеса.`
       },
       {
-        icon: "fas fa-project-diagram",
-        title:"Эффективность",
-        description: `Зачастую один сотрудник просто физически не может справится с задачами,
-                      появившимися в одно время. Наша команда, распределяет задачи и проблемы так,
-                      чтобы они были решены максимально быстро и эффективно.`
+        icon: "fas fa-user-tie",
+        title:"Нужен программист 1с?",
+        description: `В нашем штате настоящие профессионалы, которые закроют любой вопрос связанный с 1с, за приемлемый бюджет.`
       },
       {
-        icon: "fas fa-piggy-bank",
-        title:"Экономия",
-        description: `Исходя из всех исследований рынка труда, можно с уверенностью сказать, 
-                      что наше аутсоурс решение, будет для Вас гораздо выгоднее,
-                      чем штатный сотрудник.`
+        icon: "fas fa-truck-loading",
+        title:"Планируете переезжать или расширять офис?",
+        description: `Наша команда спроектирует всё необходимое для it структуры вашей организации и перевезет ваше оборудование.`
       },
       {
-        icon: "fas fa-project-diagram",
-        title:"Эффективность",
-        description: `Зачастую один сотрудник просто физически не может справится с задачами,
-                      появившимися в одно время. Наша команда, распределяет задачи и проблемы так,
-                      чтобы они были решены максимально быстро и эффективно.`
+        icon: "fas fa-wifi",
+        title:"Плохо работает wi-fi?",
+        description: `Мы спроектируем и настроим «бесшовный» wi-fi на всей территории помещения, 
+                      без лишних переключений, вы перемешаетесь, а оборудование всё будет делать за вас.`
+      },
+      {
+        icon: "fas fa-user-clock",
+        title:"Ваш системный администратор часто «пропадает»?",
+        description: `Если вам необходимо, то наши специалисты будут на связи 24/7.`
+      },
+      {
+        icon: "fas fa-headset",
+        title:"Техническая поддержка пользователей.",
+        description: `Мы постоянно на связи, используем лучшие по безопасности программы 
+                      для удаленного доступа и решение пользовательских задач.`
+      },
+      {
+        icon: "fas fa-business-time",
+        title:"Ваш администратор или аутсорсинг работают строго с 9-18?",
+        description: `Мы подходим индивидуально к каждому клиенту, и планируем работы так что бы не отвлекать 
+                      ваших специалистов от работы, нужно обновление в 3 часа ночи? Значит так и сделаем!`
       },
     ]
   }
@@ -188,6 +195,8 @@ let modal = new Vue({
     name: '',
     phone: '',
     email: '',
+    description: 'Согласитесь не обработку данных',
+    descriptionShow: true,
     text_success: 'Мы скоро с Вами свяжемся.' 
   }
 
@@ -232,17 +241,68 @@ document.querySelector('.cancel-icon').addEventListener('click', e=> {
 })
 
 document.querySelector('.callback-send').addEventListener('click', e=>{
-  // collect data and send
-  modal.name = ''
-  modal.phone = ''
-  modal.email = ''
-  success.classList.add('show')
-  inputs.classList.remove('show')
-  button.classList.remove('show')
+  let formData = new FormData()
+  formData.append('name', modal.name)
+  formData.append('phone', modal.phone)
+  formData.append('email', modal.email)
+
+  let accept = document.querySelector('input[type="checkbox"]')
+  if (accept.checked) {
+    sendModal(formData)
+  } else {
+    modal.description = 'Согласитесь не обработку данных'
+    modal.descriptionShow = false
+    setTimeout( () => {
+      modal.descriptionShow = true
+    },2000)
+  }
 
 })
 
 
+function sendModal(formData) {
+   
+
+  let xhr = new XMLHttpRequest()
+  xhr.open("POST", "/send/send.php")
+  xhr.send(formData)
+
+  xhr.onreadystatechange = function() {
+    
+    if (this.readyState != 4) return
+
+    if (this.status != 200) {
+      console.log( 'ошибка: ' + (this.status ? this.statusText : 'запрос не удался') )
+      modal.description = 'Ошибка отправки запроса. Попробуйте снова.'
+      modal.descriptionShow = false
+      setTimeout( () => {
+        modal.descriptionShow = true
+      },2000)
+
+      return
+    } else {
+     console.log(this.responseText);
+    
+    modal.name = ''
+    modal.phone = ''
+    modal.email = ''
+    accept.checked = false
+    success.classList.add('show')
+    inputs.classList.remove('show')
+    button.classList.remove('show')
+
+      // document.querySelector('.modal-form .description').classList.remove('hide');
+      // document.querySelector('.modal-form form').classList.add('hide');
+      // setTimeout(()=>{
+      //     document.querySelector('.modal-form').style.opacity = "0";
+      //     document.querySelector('.modal-form').style.visibility = "hidden";
+      // }, 800);
+
+    }
+
+  }
+
+}
 
 
 // Сравнение
@@ -267,9 +327,18 @@ Vue.component('grid-table', {
       <div class="item blue">{{compare[4].text}}</div>
       <div class="item blue">{{compare[4].text2}}</div>
       <div class="item blue">{{compare[4].text3}}</div>
-      <div class="item footer">{{compare[5].text}}</div>
-      <div class="item footer">{{compare[5].text2}}</div>
-      <div class="item footer">{{compare[5].text3}}</div>
+      <div class="item ">{{compare[5].text}}</div>
+      <div class="item ">{{compare[5].text2}}</div>
+      <div class="item ">{{compare[5].text3}}</div>
+      <div class="item blue">{{compare[6].text}}</div>
+      <div class="item blue">{{compare[6].text2}}</div>
+      <div class="item blue">{{compare[6].text3}}</div>
+      <div class="item ">{{compare[7].text}}</div>
+      <div class="item ">{{compare[7].text2}}</div>
+      <div class="item ">{{compare[7].text3}}</div>
+      <div class="item footer blue">{{compare[8].text}}</div>
+      <div class="item footer blue">{{compare[8].text2}}</div>
+      <div class="item footer blue">{{compare[8].text3}}</div>
     </div>
   `
 })
@@ -281,13 +350,17 @@ new Vue({
   data: {
     text: "Содержать штатного специалиста или локальную it инфраструктуру это <br> <span>не выгодно</span> Давайте посчитаем.",
     table: [
-      { text: "Расходы в месяц в руб.", text2: "Штатный сотрудник", text3: "IT-аутсорс" },
-      { text: "Sony playstation 4 и игры", text2: "30 000", text3: "-" },
-      { text: "Кальян и табак", text2: "7 000", text3: "-" },
-      { text: "Проститутки", text2: "50 000", text3: "-" },
-      { text: "Зарплата", text2: "80 000", text3: "50 000" },
-      { text: "Итого", text2: "167 000", text3: "50 000" },
-    ]
+      { text: "Расходы из рассчета за год", text2: "Штатный сотрудник", text3: "Команда itego" },
+      { text: "Зарплата", text2: "600 000", text3: "500 000" },
+      { text: "Налоги", text2: "258 000", text3: "0" },
+      { text: "Рабочее место (ПК)", text2: "50 000", text3: "0" },
+      { text: "Больничный", text2: "25 000", text3: "0" },
+      { text: "Аренда и доп. расходы сотрудника", text2: "30 000", text3: "0" },
+      { text: "Повышение квалификации", text2: "30 000", text3: "0" },
+      { text: "ПО для удаленного доступа", text2: "27 000", text3: "0" },
+      { text: "Всего", text2: "1 020 000", text3: "500 000" },
+    ],
+    benefit: "Выгода в год	<span>520 000 руб.</span>"
   }
 
 })
@@ -536,6 +609,9 @@ new Vue({
   }
 
 })
+
+
+
 
 
 

@@ -30,7 +30,7 @@ body
 
 $black: #151719
 $white: white
-$blue: #310062
+$blue: #1565C0
 
 @keyframes arrow
   0%
@@ -405,7 +405,7 @@ $blue: #310062
 
       .item-title
         font-weight: bold
-        font-size: 25px
+        font-size: 23px
         margin-bottom: 30px
         text-align: center
         text-transform: uppercase
@@ -414,7 +414,7 @@ $blue: #310062
           font-size: 18px
 
       .item-description
-        font-size: 20px
+        font-size: 18px
         text-align: justify
         line-height: 30px
 
@@ -523,9 +523,11 @@ $blue: #310062
       width: 70%
       height: 70vh
 
+    @media screen and (max-width: 400px) and (orientation: portrait)
+      height: 75vh
+
     @media screen and (max-width: 350px) and (orientation: portrait)
       width: 75%
-      height: 75vh
 
     @media screen and (max-width: 710px) and (orientation: landscape)
       width: 80%
@@ -541,25 +543,30 @@ $blue: #310062
 
     .title
       color: $black
-      font-size: 30px
-      margin: 50px 0
+      font-size: 25px
+      margin: 30px 0 50px 0
 
       @media screen and (max-width: 1000px)
         font-size: 25px
         margin: 40px 0
+        margin-top: 5px
 
       @media screen and (max-width: 500px) and (orientation: portrait)
         font-size: 18px
         margin-bottom: 30px
+
+      @media screen and (max-width: 400px) and (orientation: portrait)
+        margin-right: 55px
+
+      @media screen and (max-width: 350px) and (orientation: portrait)
+        margin-right: 45px
+        margin-bottom: 20px
 
       @media screen and (max-width: 710px) and (orientation: landscape)
         font-size: 20px
         margin-bottom: 30px
 
       @media screen and (max-width: 650px) and (orientation: landscape)
-        margin-top: 20px
-
-      @media screen and (max-width: 600px) and (orientation: landscape)
         margin-top: 0
 
     .inputs-block
@@ -576,7 +583,7 @@ $blue: #310062
 
       .label
         color: $black
-        font-size: 25px
+        font-size: 22px
         margin-bottom: 20px
 
         @media screen and (max-width: 1000px)
@@ -591,11 +598,11 @@ $blue: #310062
       input
         width: 100%
         padding: 10px
-        font-size: 25px
+        font-size: 22px
         color: $black
         border-radius: 0
         border: 2px solid $black
-        margin-bottom: 40px
+        margin-bottom: 30px
 
         @media screen and (max-width: 1000px)
           font-size: 20px
@@ -604,6 +611,7 @@ $blue: #310062
         @media screen and (max-width: 500px) and (orientation: portrait)
           font-size: 16px
           margin-bottom: 16px
+          width: 80%
 
         @media screen and (max-width: 710px) and (orientation: landscape)
           width: 50%
@@ -615,6 +623,65 @@ $blue: #310062
         @media screen and (max-width: 600px) and (orientation: landscape)
           margin-left: 10%
 
+      .accept-block
+
+        input[type=checkbox] 
+          display: none
+
+          &:checked + label
+            &:before
+              border-right: none
+              border-top: none
+              transform: rotate(-50deg)
+              top: 2px
+              left: 2px
+              height: 5px
+
+        input[type=checkbox] + label
+          font-size: 16px
+          line-height: 140%
+          color: $black
+          padding-left: 30px
+          position: relative
+
+          @media screen and (max-width: 500px) and (orientation: portrait)
+            font-size: 14px
+
+          &:before
+              content: ''
+              position: absolute
+              top: 0
+              left: 0
+              width: 15px
+              height: 15px
+              border: 2px solid $black
+              transition: all 0.3s ease
+
+      .description-accept
+        font-size: 20px
+        line-height: 180%
+        padding: 20px 0
+        text-align: center
+        transition: all 0.3s ease
+        opacity: 1
+        visibility: vissible
+        width: 100%
+        height: 40px
+
+        @media screen and (max-width: 500px) and (orientation: portrait)
+          font-size: 16px
+
+        @media screen and (max-width: 400px) and (orientation: portrait)
+          font-size: 14px
+
+        @media screen and (max-width: 710px) and (orientation: landscape)
+          font-size: 16px
+
+      .hide 
+        opacity: 0
+        visibility: hidden
+        height: 0
+
     .button
       border: 4px solid $black
       border-radius: 10px
@@ -622,27 +689,23 @@ $blue: #310062
       color: $black
       font-size: 25px
       cursor: pointer
-      margin: 20px 0
+      margin: 10px 0 20px 0
       opacity: 0
       visability: hidden
       transition: all 0.3s ease
 
-      @media screen and (max-width: 1000px)
-        margin-top: 50px
-
       @media screen and (max-width: 500px) and (orientation: portrait)
-        margin-top: 25px
-
-      @media screen and (max-width: 370px) and (orientation: portrait)
-        margin-top: 10px
+        margin-top: 0px
 
       @media screen and (max-width: 350px) and (orientation: portrait)
-        margin-top: 3px
         font-size: 18px
 
       @media screen and (max-width: 710px) and (orientation: landscape)
         font-size: 18px
         margin-top: 15px
+
+      @media screen and (max-width: 650px) and (orientation: landscape)
+        margin-top: 0
 
       @media screen and (max-width: 600px) and (orientation: landscape)
         margin-top: 3px
@@ -722,15 +785,15 @@ $blue: #310062
 
   .grid-table
     display: grid
-    grid-template: repeat(6, 100px) / 40% 30% 30%
+    grid-template: repeat(9, 100px) / 40% 30% 30%
     margin-top: 100px
 
     @media screen and (max-width: 1000px)
-      grid-template: repeat(6, 80px) / 40% 30% 30%
+      grid-template: repeat(9, 80px) / 40% 30% 30%
       margin-top: 60px
 
     @media screen and (max-width: 780px)
-      grid-template: repeat(6, 70px) / 40% 30% 30%
+      grid-template: repeat(9, 70px) / 40% 30% 30%
 
     @media screen and (max-width: 500px) and (orientation: portrait)
       margin-top: 30px
@@ -758,6 +821,9 @@ $blue: #310062
       @media screen and (max-width: 500px) and (orientation: portrait)
         font-size: 16px
 
+      @media screen and (max-width: 350px) and (orientation: portrait)
+        font-size: 14px
+
     .header
       font-weight: bold
       border-bottom: 2px solid $blue
@@ -768,6 +834,26 @@ $blue: #310062
 
     .footer
       font-weight: bold
+
+  .benefit
+    text-align: center
+    margin-top: 50px
+    font-size: 30px
+    color: $black
+
+    @media screen and (max-width: 1000px)
+      font-size: 25px
+
+    @media screen and (max-width: 500px) and (orientation: portrait)
+      font-size: 20px
+
+    @media screen and (max-width: 350px) and (orientation: portrait)
+      font-size: 16px
+      margin-top: 35px
+
+    span
+      font-weight: bold
+      margin-left: 20px
 
 // Команда
 
